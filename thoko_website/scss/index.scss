@@ -1,0 +1,44 @@
+#main-nav {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    .nav-container {
+        max-width: 1440px;
+        height: 66px;
+        // border: 1px solid green;
+        justify-content: space-between;
+        margin: 0 auto;
+        display: flex;
+        padding: 0 2rem;
+        align-items: center;
+        #brand-logo {
+            margin: 0;
+            font-weight: 900;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 15px;
+            li {
+                margin: 0 20px;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                &.active {
+                    color: #078088;
+                    font-weight: 900;
+                }
+            }
+        }
+        #mobile-nav-button {
+            display: none;
+        }
+    }
+}
