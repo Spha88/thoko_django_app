@@ -1,0 +1,59 @@
+#hero {
+    height: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/bg.jpg');
+    background: {
+        size: cover;
+        position: center center;
+    }
+    div {
+        background: rgba(1, 117, 140, 0.63);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 2rem;
+        width: 900px;
+        height: 360px;
+        font-family: 'Montserrat', sans-serif;
+        color: #fff;
+        h2 {
+            font-size: 64px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+}
+#cta {
+    background-color: #2C4971;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    h3 {
+        font-size: 20px;
+        margin: 0;
+        margin-right: 4rem;
+        padding: 0;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+    button {
+        border: 1px solid #fff;
+        background: #078088;
+        color: #fff;
+        padding: 10px 50px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
