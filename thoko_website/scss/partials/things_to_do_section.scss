@@ -1,0 +1,50 @@
+// Things to do section
+#things-to-do {
+    margin-bottom: 4rem;
+
+    header {
+        max-width: 1300px;
+        margin: 0 auto;
+        h2 {
+            color: $dark-blue;
+            position: relative;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            &::after {
+                position: absolute;
+                content: '';
+                height: 4px;
+                width: 80px;
+                left: 0;
+                bottom: 0;
+                background: $turquoise;
+            }
+        }
+    }
+    main {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding-bottom: 1.5rem;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background-color: $turquoise;
+        }
+        div.todo-card {
+            text-align: center;
+            padding: 1rem 2rem; 
+            width: 33%;
+            img {width: 80px; height: 80px; margin-bottom: 25px;}
+            h3 { font-size: 18px; font-weight: 600; color: $dark-blue; margin-bottom: 25px;}
+            p { text-align: left;}
+        }
+    }
+}

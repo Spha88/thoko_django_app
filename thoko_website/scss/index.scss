@@ -1,4 +1,22 @@
+$dark-blue: #2C4971;
+$turquoise: #078088;
+$light-grey: #e6e6e6;
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* Navigation Menu */
 @import './partials/main_nav.scss';
@@ -11,4 +29,7 @@
 
 // Places to stay section on home page
 @import './partials/places_to_stay_section.scss';
+
+// Things to do section 
+@import './partials/things_to_do_section.scss';
 

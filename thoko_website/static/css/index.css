@@ -1,3 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Navigation Menu */
 #main-nav {
   position: relative;
@@ -122,9 +138,6 @@
 #about_section div h2 {
   color: #2C4971;
   font-size: 40px;
-  line-height: 49px;
-  text-transform: uppercase;
-  font-weight: 700;
   position: relative;
   padding-bottom: 30px;
   margin-bottom: 30px;
@@ -156,7 +169,7 @@
 }
 
 #places-to-stay {
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   padding: 0 20px;
 }
 #places-to-stay header {
@@ -164,11 +177,8 @@
 }
 #places-to-stay header h2 {
   margin-bottom: 48px;
-  font-weight: 700;
   font-size: 40px;
-  color: #2c4971;
-  text-transform: uppercase;
-  line-height: 65.16px;
+  color: #2C4971;
 }
 #places-to-stay main {
   display: flex;
@@ -228,6 +238,66 @@
 }
 #places-to-stay footer a:hover {
   background-color: #2c4971;
+}
+
+#things-to-do {
+  margin-bottom: 4rem;
+}
+#things-to-do header {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+#things-to-do header h2 {
+  color: #2C4971;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+#things-to-do header h2::after {
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 80px;
+  left: 0;
+  bottom: 0;
+  background: #078088;
+}
+#things-to-do main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+  position: relative;
+}
+#things-to-do main::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #078088;
+}
+#things-to-do main div.todo-card {
+  text-align: center;
+  padding: 1rem 2rem;
+  width: 33%;
+}
+#things-to-do main div.todo-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 25px;
+}
+#things-to-do main div.todo-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2C4971;
+  margin-bottom: 25px;
+}
+#things-to-do main div.todo-card p {
+  text-align: left;
 }
 
 /*# sourceMappingURL=index.css.map */

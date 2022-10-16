@@ -1,15 +1,12 @@
 #places-to-stay {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     padding: 0 20px;
     header {
         text-align: center;
         h2 {
             margin-bottom: 48px;
-            font-weight: 700;
             font-size: 40px;
-            color: #2c4971;
-            text-transform: uppercase;
-            line-height: 65.16px;
+            color: $dark-blue;
         }
     }
     main {
