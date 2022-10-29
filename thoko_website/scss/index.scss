@@ -1,6 +1,7 @@
 $dark-blue: #2C4971;
 $turquoise: #078088;
 $light-grey: #e6e6e6;
+$white: #ffffff;
 
 body {
     margin: 0;
@@ -33,3 +34,5 @@ a {
 // Things to do section 
 @import './partials/things_to_do_section.scss';
 
+// Shuttle services section 
+@import './partials/shuttle_services_section.scss';

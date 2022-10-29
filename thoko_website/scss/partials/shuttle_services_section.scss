@@ -1,0 +1,76 @@
+#shuttle_services {
+    margin-bottom: 10rem;
+    main {
+        max-width: 1300px;
+        min-height: 540px;
+        margin: 0 auto;
+        position: relative;
+        
+            
+        #shuttle_section_image {
+            width: 45%;
+            height: 350px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            object-fit: cover;
+        }
+        
+        .section_content {
+            width: 65%;
+            min-height: 450px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: $turquoise;
+            z-index: 1;
+            padding: 3em;
+            display: grid;
+            justify-items: end;
+            div {
+                width: 80%;
+                color: $white;
+                h2 {
+                    color: $white;
+                    position: relative;
+                    padding-bottom: 30px;
+                    margin-bottom: 20px;
+                    &::after {
+                        content: '';
+                        height: 4px;
+                        background: $white;
+                        width: 80px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+                img {
+                    margin-bottom: 20px;
+                }
+                footer {
+                    text-align: end;
+                    padding-right: 3em;
+                    a {
+                        display: inline-block;
+                        margin-top: 40px;
+                        background: $dark-blue;
+                        color: #fff;
+                        text-decoration: none;
+                        padding: 10px 50px;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        transition: all 500ms ease;
+                        outline: 1px solid transparent;
+                        &:hover {
+                            outline: 1px solid $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
