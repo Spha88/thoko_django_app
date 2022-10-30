@@ -374,4 +374,35 @@ a {
   outline: 1px solid #ffffff;
 }
 
+#site_footer {
+  background-color: #2C4971;
+  color: #ffffff;
+}
+#site_footer #footer_container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4em 0;
+  display: flex;
+  justify-content: space-between;
+}
+#site_footer #footer_container div {
+  width: 20%;
+  padding: 0 2em;
+}
+#site_footer #footer_container div:first-child {
+  width: 40%;
+  padding-right: 4em;
+}
+#site_footer #footer_container div h4 {
+  font-size: 20px;
+}
+#site_footer #footer_container div ul {
+  list-style-type: none;
+  padding: 0;
+}
+#site_footer #footer_container div ul.social_media_icons li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
 /*# sourceMappingURL=index.css.map */
