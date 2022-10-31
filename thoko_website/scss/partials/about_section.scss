@@ -10,11 +10,17 @@
             size: cover;
             position: center center;
         }
+        @include media($tablet) {
+            display: none;
+        }
     }
     div {
         width: 60%;
         position:relative;
         padding: 4rem 4rem;
+        @include media($tablet) {
+            width: 100%;
+        }
         h2 {
             color: $dark-blue;
             font-size: 40px;

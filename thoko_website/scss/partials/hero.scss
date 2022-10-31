@@ -8,17 +8,23 @@
         size: cover;
         position: center center;
     }
+    @include media($tablet){
+        height: 500px;
+    }
     div {
         background: rgba(1, 117, 140, 0.63);
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 2rem;
+        margin: 4rem;
         width: 900px;
         height: 360px;
         font-family: 'Montserrat', sans-serif;
         color: #fff;
+        @include media($tablet) {
+            max-height: 300px;
+        }
         h2 {
             font-size: 64px;
             font-weight: 600;

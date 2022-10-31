@@ -77,6 +77,12 @@ a {
   background-image: url("../images/bg.jpg");
   background-size: cover;
   background-position: center center;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #hero {
+    height: 500px;
+  }
 }
 #hero div {
   background: rgba(1, 117, 140, 0.63);
@@ -84,11 +90,17 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 2rem;
+  margin: 4rem;
   width: 900px;
   height: 360px;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #hero div {
+    max-height: 300px;
+  }
 }
 #hero div h2 {
   font-size: 64px;
@@ -138,11 +150,23 @@ a {
   background-image: url("../images/about_section.jpg");
   background-size: cover;
   background-position: center center;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #about_section div.about-image {
+    display: none;
+  }
 }
 #about_section div {
   width: 60%;
   position: relative;
   padding: 4rem 4rem;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #about_section div {
+    width: 100%;
+  }
 }
 #about_section div h2 {
   color: #2C4971;
@@ -202,12 +226,25 @@ a {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
+  justify-content: space-between;
 }
 #places-to-stay main .my-card {
   width: 33%;
+  transition: all 500ms ease-in-out;
 }
 #places-to-stay main .my-card:nth-child(2) {
   margin: 0 20px;
+}
+@media (max-width: 768px) {
+  #places-to-stay main .my-card {
+    width: 49%;
+  }
+  #places-to-stay main .my-card:nth-child(2) {
+    margin: 0 0;
+  }
+  #places-to-stay main .my-card:nth-child(3) {
+    display: none;
+  }
 }
 #places-to-stay main .my-card img {
   width: 100%;
@@ -259,6 +296,7 @@ a {
 
 #things-to-do {
   margin-bottom: 4rem;
+  padding: 0 1rem;
   transition: all 500ms ease-in-out;
 }
 @media (max-width: 1024px) {
@@ -340,10 +378,17 @@ a {
 }
 #things-to-do main div.todo-card p {
   text-align: left;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #things-to-do main div.todo-card p {
+    display: none;
+  }
 }
 
 #shuttle_services {
   margin-bottom: 10rem;
+  padding: 0 1em;
   transition: all 500ms ease-in-out;
 }
 @media (max-width: 1024px) {
@@ -368,11 +413,18 @@ a {
   z-index: 10;
   object-fit: cover;
   transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 @media (max-width: 1024px) {
   #shuttle_services main #shuttle_section_image {
     width: 40%;
     height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  #shuttle_services main #shuttle_section_image {
+    position: relative;
+    width: 100%;
   }
 }
 #shuttle_services main .section_content {
@@ -387,15 +439,28 @@ a {
   display: grid;
   justify-items: end;
   transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 @media (max-width: 1024px) {
   #shuttle_services main .section_content {
     width: 70%;
   }
 }
+@media (max-width: 768px) {
+  #shuttle_services main .section_content {
+    position: relative;
+    width: 100%;
+  }
+}
 #shuttle_services main .section_content div {
   width: 80%;
   color: #ffffff;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #shuttle_services main .section_content div {
+    width: 100%;
+  }
 }
 #shuttle_services main .section_content div h2 {
   color: #ffffff;
