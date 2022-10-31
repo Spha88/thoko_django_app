@@ -5,6 +5,10 @@
     @include media($laptop) {
         padding: 0 1em;
     }
+    @include media($mobile) {
+        padding: 0 10px;
+        margin-bottom: 2.5rem;
+    }
     header {
         max-width: 1300px;
         margin: 0 auto;
@@ -35,6 +39,9 @@
         margin: 0 auto;
         padding-bottom: 1.5rem;
         position: relative;
+        @include media($mobile) {
+            padding-bottom: 0;
+        }
         &::after {
             content: '';
             position: absolute;
@@ -55,8 +62,20 @@
             @include media($laptop) {
                 padding: 1rem;
             }
+            @include media($mobile) {
+                padding: 0;
+                &:nth-child(2) {
+                    padding: 0 10px;
+                }
+            }
             img {width: 80px; height: 80px; margin-bottom: 25px;}
-            h3 { font-size: 18px; font-weight: 600; color: $dark-blue; margin-bottom: 25px;}
+            h3 { 
+                font-size: 18px; font-weight: 600; color: $dark-blue; margin-bottom: 25px;
+                @include media($mobile) {
+                    font-size: 16px;
+                    text-transform: none;
+                }
+            }
             p { 
                 text-align: left;
                 @include media($tablet) {

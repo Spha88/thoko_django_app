@@ -45,6 +45,12 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 
+h2 {
+    @include media($mobile) {
+        font-size: 1.7em !important;
+    }
+}
+
 a {
     text-decoration: none;
     color: inherit;

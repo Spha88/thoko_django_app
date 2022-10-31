@@ -5,6 +5,10 @@
         padding: 0 1em;
         margin-bottom: 5rem;
     }
+    @include media($mobile) {
+        padding: 0 5px;
+        margin-bottom: 5px;
+    }
     main {
         width: 100%;
         max-width: 1300px;
@@ -29,6 +33,9 @@
                 position: relative;
                 width: 100%;
             }
+            @include media($mobile) {
+                height: 250px;
+            }
 
         }
         
@@ -49,6 +56,9 @@
             @include media($tablet) {
                 position: relative;
                 width: 100%;
+            }
+            @include media($mobile) {
+                padding: 2.5em 1.5em;
             }
             div {
                 width: 80%;
@@ -92,6 +102,11 @@
                         outline: 1px solid transparent;
                         &:hover {
                             outline: 1px solid $white;
+                        }
+                    }
+                    @include media($mobile) {
+                        a {
+                            margin-top: 20px;
                         }
                     }
                 }
