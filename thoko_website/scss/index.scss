@@ -3,9 +3,38 @@ $turquoise: #078088;
 $light-grey: #e6e6e6;
 $white: #ffffff;
 
+/* Media query screen sizes */
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 425px;
+
+/* Media Query */
+@mixin media($bp) {
+    transition: all 500ms ease-in-out;
+    @if $bp == 1024px {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    } @else if $bp == 768px {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $bp == 425px {
+        @media (max-width: 425px) {
+            @content;
+        }
+    }
+}
+* {
+    box-sizing: border-box;
+    transition: all 500ms ease-in-out;
+}
+
 body {
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,7 +1,9 @@
 // Things to do section
 #things-to-do {
     margin-bottom: 4rem;
-
+    @include media($laptop) {
+        padding: 0 1em;
+    }
     header {
         max-width: 1300px;
         margin: 0 auto;
@@ -18,6 +20,9 @@
                 left: 0;
                 bottom: 0;
                 background: $turquoise;
+            }
+            @include media($laptop) {
+                margin-left: 2rem;
             }
         }
     }
@@ -37,11 +42,18 @@
             height: 4px;
             width: 100%;
             background-color: $turquoise;
+            @include media($laptop) {
+                width: 95%;
+                translate: 2.5%;
+            }
         }
         div.todo-card {
             text-align: center;
             padding: 1rem 2rem; 
             width: 33%;
+            @include media($laptop) {
+                padding: 1rem;
+            }
             img {width: 80px; height: 80px; margin-bottom: 25px;}
             h3 { font-size: 18px; font-weight: 600; color: $dark-blue; margin-bottom: 25px;}
             p { text-align: left;}

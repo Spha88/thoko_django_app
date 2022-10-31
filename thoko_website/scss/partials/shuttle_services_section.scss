@@ -1,6 +1,11 @@
 #shuttle_services {
     margin-bottom: 10rem;
+    @include media($laptop) {
+        padding: 0 1em;
+        margin-bottom: 5rem;
+    }
     main {
+        width: 100%;
         max-width: 1300px;
         min-height: 540px;
         margin: 0 auto;
@@ -15,6 +20,10 @@
             left: 0;
             z-index: 10;
             object-fit: cover;
+            @include media($laptop) {
+                width: 40%;
+                height: 300px;
+            }
         }
         
         .section_content {
@@ -28,6 +37,9 @@
             padding: 3em;
             display: grid;
             justify-items: end;
+            @include media($laptop) {
+                width: 70%;
+            }
             div {
                 width: 80%;
                 color: $white;

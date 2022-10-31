@@ -1,6 +1,15 @@
+/* Media query screen sizes */
+/* Media Query */
+* {
+  box-sizing: border-box;
+  transition: all 500ms ease-in-out;
+}
+
 body {
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -156,6 +165,14 @@ a {
   width: 70%;
   line-height: 162.9%;
   margin-bottom: 50px;
+  transition: all 2s ease;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #about_section div p {
+    font-size: 16px;
+    width: 100%;
+  }
 }
 #about_section div button {
   border: 2px solid #fff;
@@ -242,6 +259,12 @@ a {
 
 #things-to-do {
   margin-bottom: 4rem;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #things-to-do {
+    padding: 0 1em;
+  }
 }
 #things-to-do header {
   max-width: 1300px;
@@ -252,6 +275,7 @@ a {
   position: relative;
   padding-bottom: 30px;
   margin-bottom: 30px;
+  transition: all 500ms ease-in-out;
 }
 #things-to-do header h2::after {
   position: absolute;
@@ -261,6 +285,11 @@ a {
   left: 0;
   bottom: 0;
   background: #078088;
+}
+@media (max-width: 1024px) {
+  #things-to-do header h2 {
+    margin-left: 2rem;
+  }
 }
 #things-to-do main {
   display: flex;
@@ -279,11 +308,24 @@ a {
   height: 4px;
   width: 100%;
   background-color: #078088;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #things-to-do main::after {
+    width: 95%;
+    translate: 2.5%;
+  }
 }
 #things-to-do main div.todo-card {
   text-align: center;
   padding: 1rem 2rem;
   width: 33%;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #things-to-do main div.todo-card {
+    padding: 1rem;
+  }
 }
 #things-to-do main div.todo-card img {
   width: 80px;
@@ -302,8 +344,16 @@ a {
 
 #shuttle_services {
   margin-bottom: 10rem;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #shuttle_services {
+    padding: 0 1em;
+    margin-bottom: 5rem;
+  }
 }
 #shuttle_services main {
+  width: 100%;
   max-width: 1300px;
   min-height: 540px;
   margin: 0 auto;
@@ -317,6 +367,13 @@ a {
   left: 0;
   z-index: 10;
   object-fit: cover;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #shuttle_services main #shuttle_section_image {
+    width: 40%;
+    height: 300px;
+  }
 }
 #shuttle_services main .section_content {
   width: 65%;
@@ -329,6 +386,12 @@ a {
   padding: 3em;
   display: grid;
   justify-items: end;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #shuttle_services main .section_content {
+    width: 70%;
+  }
 }
 #shuttle_services main .section_content div {
   width: 80%;
@@ -384,14 +447,29 @@ a {
   padding: 4em 0;
   display: flex;
   justify-content: space-between;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #site_footer #footer_container {
+    padding: 3em 1em;
+  }
 }
 #site_footer #footer_container div {
   width: 20%;
   padding: 0 2em;
+  transition: all 500ms ease-in-out;
 }
 #site_footer #footer_container div:first-child {
   width: 40%;
   padding-right: 4em;
+}
+@media (max-width: 1024px) {
+  #site_footer #footer_container div {
+    padding: 0 0.5em;
+  }
+  #site_footer #footer_container div:first-child {
+    padding-right: 2em;
+  }
 }
 #site_footer #footer_container div h4 {
   font-size: 20px;
