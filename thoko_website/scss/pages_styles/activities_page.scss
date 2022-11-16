@@ -1,0 +1,106 @@
+#activities {
+    .section-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    header {
+        margin: 3rem 0;
+        padding-left: 4rem;
+        h2 {
+            font-size: 40px;
+            color: $dark-blue;
+        }
+        @include media($laptop) {
+            padding: 0 2rem;
+        }
+    }
+    
+    main#activities-container {
+        @include media($laptop) {
+           padding: 0 2rem;
+        }
+        @include media($mobile) {
+            padding: 0;
+        }
+    }
+
+    .activity-card {
+        display: flex;
+        margin-bottom: 6rem;
+        @include media($tablet) {
+            flex-direction: column;
+        }
+        @include media($mobile) {
+            margin-bottom: 4rem;
+        }
+
+        .activity-image {
+            width: 40%;
+            max-height: 400px;
+            position: relative;
+            text-align: right;
+            background: {
+                color: $dark-blue;
+                size: cover;
+            }
+            a {
+                display: inline-block;
+                position: absolute;
+                bottom: 10px;
+                right: -10px;
+                background-color: $dark-blue;
+                color: $white;
+                padding: 5px 30px;
+                text-transform: uppercase;
+                font-size: 14px; }
+            @include media($tablet) {
+                width: 100%;
+                height: 350px;
+            }
+
+        }
+
+
+        .activity-content {
+            width: 60%;
+            padding: 4rem;
+            h3 {
+                color: $dark-blue;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            h2 {
+                color: $turquoise;
+                text-transform: capitalize;
+                margin-bottom: 1em;
+                font-weight: 400;
+            }
+            p {
+                font-size: 17px;
+                line-height: 30px;
+                width: 80%;
+            }
+            @include media($laptop) {
+                padding: 2rem 2rem 1rem 2rem;
+                p { width: 100% }
+            }
+            @include media($tablet) {
+                width: 100%;
+            }
+            @include media($mobile) {
+                padding: 1rem 10px 2rem 10px;
+                h3, h2 {
+                    padding: 0 1rem;
+                }
+                h2 {
+                    margin-bottom: 0.5em;
+                }
+                p { line-height: 22px; font-size: 16px; }
+            }
+        }
+    }
+
+    
+}
