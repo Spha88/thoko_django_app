@@ -11,54 +11,25 @@
             <h2>Activities</h2>
         </header>
         <main id="activities-container">
-            <div class="activity-card">
-                <div class="activity-image" style="background-image: url('{% static "images/horse_riding.jpg" %}')">
-                    <a href="#" class="activity-link">click for details</a>
-                </div>
-                <div class="activity-content">
-                    <h3>Sunrise and sunset</h3>
-                    <h2>Horse Riding</h2>
-                    <p class="description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non consectetur a voluptatem quia reiciendis delectus hic consequuntur itaque corporis, mollitia sit in, quidem neque ea odit accusamus perspiciatis, autem dolor.
-                    </p>
-                </div>
-            </div>
-            <div class="activity-card">
-                <div class="activity-image" style="background-image: url('{% static "images/spa.jpg" %}')">
-                    <a href="#" class="activity-link">click for details</a>
-                </div>
-                <div class="activity-content">
-                    <h3>Enjoy a spa day</h3>
-                    <h2>Pamper yourself</h2>
-                    <p class="description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non consectetur a voluptatem quia reiciendis delectus hic consequuntur itaque corporis, mollitia sit in, quidem neque ea odit accusamus perspiciatis, autem dolor.
-                    </p>
-                </div>
-            </div>
-            <div class="activity-card">
-                <div class="activity-image" style="background-image: url('{% static "images/land_rover.jpg" %}')">
-                    <a href="#" class="activity-link">click for details</a>
-                </div>
-                <div class="activity-content">
-                    <h3>Expore the sunshine coast</h3>
-                    <h2>4 x 4 Trails</h2>
-                    <p class="description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non consectetur a voluptatem quia reiciendis delectus hic consequuntur itaque corporis, mollitia sit in, quidem neque ea odit accusamus perspiciatis, autem dolor.
-                    </p>
-                </div>
-            </div>
-            <div class="activity-card">
-                <div class="activity-image" style="background-image: url('{% static "images/medolino.jpg" %}')">
-                    <a href="#" class="activity-link">click for details</a>
-                </div>
-                <div class="activity-content">
-                    <h3>For homes on wheels</h3>
-                    <h2>Karavan Park</h2>
-                    <p class="description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non consectetur a voluptatem quia reiciendis delectus hic consequuntur itaque corporis, mollitia sit in, quidem neque ea odit accusamus perspiciatis, autem dolor.
-                    </p>
-                </div>
-            </div>
+            {% if activities %}
+                {% for activity in activities %}
+                    <div class="activity-card">
+                        <div class="activity-image" style="background-image: url('{{ activity.thumb_nail.url }}')">
+                            <a href="{{ activity.get_absolute_url }}" class="activity-link">click for details</a>
+                        </div>
+                        <div class="activity-content">
+                            <h3>{{ activity.subtitle }}</h3>
+                            <h2>{{ activity.title }}</h2>
+                            <p class="description">
+                                {{ activity.excerpt | safe }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h3>No causes added yet</h3>
+            {% endif %}
+            
         </main>
     </div>
 </section>

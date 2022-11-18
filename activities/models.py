@@ -20,7 +20,7 @@ class Activity(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("activity_detail", kwargs={"slug": self.slug})
+        return reverse("single_activity_page", kwargs={"slug": self.slug})
     
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title[:99], allow_unicode=True) #make a slug of no more than 100 characters
