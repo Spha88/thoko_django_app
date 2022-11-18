@@ -42,19 +42,19 @@
         @include media($mobile) {
             padding-bottom: 0;
         }
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            width: 100%;
-            background-color: $turquoise;
-            @include media($laptop) {
-                width: 95%;
-                translate: 2.5%;
-            }
-        }
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     bottom: 0;
+        //     left: 0;
+        //     height: 4px;
+        //     width: 100%;
+        //     background-color: $turquoise;
+        //     @include media($laptop) {
+        //         width: 95%;
+        //         translate: 2.5%;
+        //     }
+        // }
         div.todo-card {
             text-align: center;
             padding: 1rem 2rem; 
@@ -82,7 +82,14 @@
                     display: none;
                 }
             }
-
         }
     }
+    footer {
+        text-align: center;
+        margin-bottom: 5rem;
+        a {
+            @include button($turquoise, $dark-blue)
+        }
+    }
+
 }

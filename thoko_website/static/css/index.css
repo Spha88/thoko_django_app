@@ -1,5 +1,6 @@
 /* Media query screen sizes */
 /* Media Query */
+/* Media Query */
 * {
   box-sizing: border-box;
   transition: all 500ms ease-in-out;
@@ -522,22 +523,6 @@ a {
     padding-bottom: 0;
   }
 }
-#things-to-do main::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 4px;
-  width: 100%;
-  background-color: #078088;
-  transition: all 500ms ease-in-out;
-}
-@media (max-width: 1024px) {
-  #things-to-do main::after {
-    width: 95%;
-    translate: 2.5%;
-  }
-}
 #things-to-do main div.todo-card {
   text-align: center;
   padding: 1rem 2rem;
@@ -584,6 +569,25 @@ a {
   #things-to-do main div.todo-card p {
     display: none;
   }
+}
+#things-to-do footer {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+#things-to-do footer a {
+  display: inline-block;
+  background: #078088;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 50px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 500ms ease;
+}
+#things-to-do footer a:hover {
+  background-color: #2C4971;
 }
 
 #shuttle_services {

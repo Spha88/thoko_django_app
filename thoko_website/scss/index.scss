@@ -25,6 +25,23 @@ $mobile: 425px;
         }
     }
 }
+
+/* Media Query */
+@mixin button($bgc, $hoverbgc) {
+    display: inline-block;
+    background: $bgc;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 50px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+    &:hover {
+        background-color: $hoverbgc;
+    }
+}
 * {
     box-sizing: border-box;
     transition: all 500ms ease-in-out;
