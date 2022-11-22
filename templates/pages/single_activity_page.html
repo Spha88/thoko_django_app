@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Activities | Port Alfred{% endblock title %}
+{% block title %}{{ activity.title }}{% endblock title %}
 
 {% block content %}
 
 <section id="activities">
     <div class="section-container">
         <header>
-            <h2>Single activity page</h2>
+            <h2>{{ activity.title }}</h2>
         </header>
         <main id="activities-container">
             

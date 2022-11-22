@@ -6,4 +6,5 @@ def activities(request):
     return render(request, 'pages/activities.html', { 'activities': activities })
 
 def single_activity_page(request, slug):
-    return render(request, 'pages/single_activity_page.html')
+    activity = Activity.objects.get(slug=slug)
+    return render(request, 'pages/single_activity_page.html', {'activity': activity})
