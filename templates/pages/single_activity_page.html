@@ -5,15 +5,64 @@
 
 {% block content %}
 
-<section id="activities">
+<section id="activity-single-page">
     <div class="section-container">
         <header>
-            
+            <img src="{% static 'icons/arrow_back.png' %}" alt="arrow back to previous page" />
+            <ul>
+                <li><a href="">home /</a></li>
+                <li><a href="">activities /</a></li>
+                <li><a href="">{{ activity.title }}</a></li>
+            </ul>
         </header>
-        <main id="activities-container">
-            
-            Activity body here
-            
+        <main id="activity-container">
+            <div id="activity-main-image" style="background-image: url('{{ activity.thumb_nail.url }}')">
+                <div class="over-lay"></div>
+                <h3>{{ activity.title }}</h3>
+            </div>
+            <div class="activity-body">
+                <ul class="activity-contact-details">
+                    <li>
+                        <img src="{% static "icons/contact_person.png" %}" alt="" />
+                        <span>Anrea Coleman</span></li>
+                    <li>
+                        <img src="{% static "icons/location.png" %}" alt="" />
+                        <a href="">Kanton on Sea</a></li>
+                    <li>
+                        <img src="{% static "icons/website_icon.png" %}" alt="" />
+                        <a href="">kantonhorserides.com</a></li>
+                    <li>
+                        <img src="{% static "icons/contact_number.png"%}" alt="" />
+                        <a href="">078 345 6895</a></li>
+                    <li>
+                        <img src="{% static "icons/email_icon.png" %}" alt="">
+                        <a href="">adrea@kantonhorserides.com</a></li>
+                    <li>
+                        <img src="{% static "icons/facebook_icon.png" %}" alt="">
+                        <a href="">Kantonhorserides</a></li>
+                    <li>
+                        <img src="{% static "icons/twitter_icon.png" %}" alt="">
+                        <a href="">@kantonhorserides</span></a></li>
+                </ul>
+
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque libero ab ea, non quod eius quibusdam dolore commodi, iure at animi ullam fugiat magni quo reiciendis sint doloribus nemo accusamus. Maxime, obcaecati vel id porro beatae veniam nobis voluptatibus molestias, laboriosam adipisci,</p> 
+                    <p>quia voluptatum? Non odit reprehenderit eius pariatur culpa laboriosam autem sapiente sunt, modi ipsa rerum optio sint, fuga possimus, aliquid quam voluptatum quisquam alias doloribus iure! Doloribus autem quo molestiae voluptatum facilis quasi dolorum iusto eveniet debitis nostrum optio error dignissimos voluptatem voluptates ducimus,</p> 
+                    <p>voluptatibus fugiat aut, odit quos vero suscipit commodi quae corrupti? Et magni sunt expedita, assumenda inventore dolore fugiat quidem laboriosam recusandae cum error reiciendis animi quo ad id architecto non nisi mollitia, dolor impedit incidunt alias voluptate eveniet corporis. Eum, odio quo possimus magnam soluta, maxime accusantium atque voluptas eos qui officia, architecto ex? Expedita ad dolore nisi illo beatae maiores reiciendis voluptas architecto rem id nobis consequuntur accusantium doloremque quod aut nesciunt ea ducimus blanditiis,</p> 
+                    <p>
+                        quas officiis voluptatibus, quisquam, ipsum dolor placeat? Possimus aliquid, voluptatum praesentium, modi repellendus obcaecati quis omnis necessitatibus in ipsum voluptatem eius suscipit nulla mollitia quod atque repudiandae? Voluptatem maxime omnis repudiandae dicta ipsam facilis soluta accusantium aspernatur eius!
+                    </p>
+                </div>
+            </div>
+
+            <div class="more-links">
+                <div style="background-image: url('{% static "images/card_1.jpg" %}')"></div>
+                <div style="background-image: url('{% static "images/card_2.jpg" %}')"></div>
+                <div style="background-image: url('{% static "images/card_3.jpg" %}')"></div>
+                <div style="background-image: url('{% static "images/horse_riding.jpg" %}')"></div>
+                <div style="background-image: url('{% static "images/shuttle_services_taxi.jpg" %}')"></div>
+                <div style="background-image: url('{{ activity.thumb_nail.url }}')"></div>
+            </div>
         </main>
     </div>
 </section>

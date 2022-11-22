@@ -1,0 +1,89 @@
+#activity-single-page {
+    header {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 1rem 0 2rem 0; 
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline-block;
+            }
+        }
+    }
+    #activity-container {
+        max-width: 1440px;
+        margin: 0 auto 6rem;
+
+        div#activity-main-image {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: center center no-repeat;
+            background-size: cover;
+            margin-bottom: 2rem;
+            div.over-lay {
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, rgba(44,73,113,1) 0%, rgba(0,212,255,0) 100%);
+            }
+            h3 {
+                z-index: 10;
+                color: white;
+            }
+        }
+        div.activity-body {
+            display: flex;
+            gap: 20px;
+            max-width: 1024px;
+            padding: 0 10px;
+            margin: 0 auto 2rem;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                width: 35%;
+                li {
+                    padding-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 500;
+                    color: black;
+                    img {
+                        margin-right: 20px;
+                        width: 24px;
+                        height: auto;
+                    }
+                }
+            }
+            div {
+                width: 65%;
+            }
+        }
+
+        div.more-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0 10px;
+            div {
+                width: 30%;
+                height: 300px;
+                background: center center no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+}
