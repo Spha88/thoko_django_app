@@ -10,6 +10,17 @@ class Activity(models.Model):
     thumb_nail = models.ImageField(upload_to="photos/%Y/%m/%d/")
     excerpt = models.TextField(null=True, blank=True)
     content = models.TextField(null=True, blank=True)
+
+    contact_person = models.CharField(null=True, blank=True, max_length=150)
+    location = models.CharField(null=True, blank=True, max_length=150)
+    website = models.URLField(db_index=True, null=True, blank=True, max_length=150)
+    email = models.EmailField(null=True, blank=True, max_length=150)
+    contact_number = models.CharField(null=True, blank=True, max_length=150)
+    facebook_page_name = models.CharField(null=True, blank=True, max_length=150)
+    facebook_page_link = models.URLField(db_index=True, null=True, blank=True, max_length=150)
+    twitter_handle = models.CharField(null=True, blank=True, max_length=150)
+    twitter_profile_link = models.URLField(db_index=True, null=True, blank=True, max_length=150)
+
     published = models.BooleanField(default=False)
     date = models.DateTimeField(default=datetime.now)
 
