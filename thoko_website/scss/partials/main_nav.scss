@@ -11,6 +11,9 @@
         padding: 0;
         align-items: center;
         position: relative;
+        @include media($large-laptop) {
+            padding: 0 20px;
+        }
         @include media($mobile) {
             height: 10vh;
         }
@@ -19,7 +22,6 @@
                 margin: 0;
                 font-weight: 900;
                 font-size: 20px;
-                text-transform: uppercase;
             }
             h5 {
                 font-size: 14px;
