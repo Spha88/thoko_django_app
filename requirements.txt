@@ -1,3 +1,4 @@
+asgiref==3.5.2
 Django==4.1.2
 importlib-metadata==5.0.0
 pathspec==0.10.1
