@@ -3,13 +3,15 @@ from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
 
+from tinymce import models as tinymce_models
+
 class Activity(models.Model): 
     slug = models.SlugField(blank=True, null=True)
     title = models.CharField(max_length=150)
     subtitle = models.CharField(max_length=150)
     thumb_nail = models.ImageField(upload_to="photos/%Y/%m/%d/")
-    excerpt = models.TextField(null=True, blank=True)
-    content = models.TextField(null=True, blank=True)
+    excerpt = tinymce_models.HTMLField(null=True, blank=True, help_text="Excerpt is made from the first paragraph of content")
+    content = tinymce_models.HTMLField(null=True, blank=True)
 
     contact_person = models.CharField(null=True, blank=True, max_length=150)
     location = models.CharField(null=True, blank=True, max_length=150)
