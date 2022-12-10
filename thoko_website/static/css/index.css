@@ -1135,4 +1135,67 @@ a {
   }
 }
 
+#attractions {
+  position: relative;
+  background-color: #e6e6e6;
+}
+#attractions header {
+  height: 75vh;
+  background-image: url("../images/land_rover.jpg");
+  background-position: center center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.651);
+}
+#attractions header:hover {
+  background-size: 105% auto;
+}
+#attractions header .mask {
+  height: 100%;
+  background-color: rgba(15, 122, 172, 0.452);
+}
+#attractions header .mask .heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+#attractions header .mask .heading-container h2 {
+  font-size: 50px;
+}
+#attractions header .mask .heading-container h2 span {
+  font-family: "Pacifico", cursive;
+  text-transform: capitalize;
+}
+#attractions main {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+#attractions main .attractions-container {
+  position: relative;
+  top: -20vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#attractions main .attractions-container div.card {
+  width: 24%;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+#attractions main .attractions-container div.card img.thumbnail {
+  width: 100%;
+  height: 200px;
+}
+#attractions main .attractions-container div.card .card-body {
+  padding: 10px;
+}
+#attractions main .attractions-container div.card .card-body .star-rating {
+  display: flex;
+}
+
 /*# sourceMappingURL=index.css.map */

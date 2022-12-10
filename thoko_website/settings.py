@@ -22,6 +22,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'activities.apps.ActivitiesConfig',
+    'attractions.apps.AttractionsConfig',
 
     'tinymce',
     'django.contrib.admin',
