@@ -30,7 +30,6 @@
             @include media($mobile) {
                 width: 100%;
                 margin-bottom: 2rem;
-                border-bottom: 1px solid black;
                 &:first-child {
                     width: 100%;
                 }
