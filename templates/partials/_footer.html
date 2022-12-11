@@ -13,10 +13,10 @@
         </div>
         <div>
             <h4>Also checkout</h4>
-            <ul>
-                <li>About</li>
-                <li>Attractions</li>
-                <li>Activities</li>
+            <ul class="footer-nav-menu">
+                <li><a href="#" class="{% if 'about' in request.path %}active{% endif %}">About</a></li>
+                <li><a href="{% url 'attractions' %}" class="{% if 'attractions' in request.path %}active{% endif %}">Attractions</a></li>
+                <li><a href="{% url 'activities' %}" class="{% if 'activities' in request.path %}active{% endif %}">Activities</a></li>
                 <li>Dining</li>
                 <li>Contact us</li>
             </ul>

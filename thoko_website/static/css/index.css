@@ -814,6 +814,15 @@ a {
   display: inline-block;
   margin: 0 10px;
 }
+#site_footer #footer_container div ul.footer-nav-menu li {
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+#site_footer #footer_container div ul.footer-nav-menu li a.active {
+  font-weight: bold;
+  color: #078088;
+  text-shadow: 2px 2px 2px black;
+}
 
 #activities .section-container {
   max-width: 1400px;
