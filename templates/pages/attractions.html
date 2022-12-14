@@ -23,7 +23,9 @@
                         <img class="thumbnail" src="{{ attraction.thumb_nail.url }}" alt="" />
                         
                         <div class="card-body">
-                            <h4>{{ attraction.title }}</h4>
+                            <a href="{{ attraction.get_absolute_url }}">
+                                <h4>{{ attraction.title }}</h4>
+                            </a>
                             <div class="star-rating">
                                 {% if attraction.stars %}
                                     {% for star in attraction.num_of_stars %}

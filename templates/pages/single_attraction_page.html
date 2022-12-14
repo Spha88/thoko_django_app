@@ -1,74 +1,74 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}{{ activity.title }}{% endblock title %}
+{% block title %}{{ attraction.title }}{% endblock title %}
 
 {% block content %}
 
 <section id="activity-single-page">
     <div class="section-container">
         <header>
-            <a href="./"><img width="auto" height="auto" src="{% static 'icons/arrow_back.png' %}" alt="arrow back to previous page" /></a>
+            <a href="./"><img src="{% static 'icons/arrow_back.png' %}" alt="arrow back to previous page" /></a>
             <ul>
                 <li><a href="{% url "home" %}">home /</a></li>
-                <li><a href="{% url "activities" %}">activities /</a></li>
-                <li><a href="">{{ activity.title }}</a></li>
+                <li><a href="{% url "attractions" %}">attractions /</a></li>
+                <li><a href="">{{ attraction.title }}</a></li>
             </ul>
         </header>
         <main id="activity-container">
-            <div id="activity-main-image" style="background-image: url('{{ activity.thumb_nail.url }}')">
+            <div id="activity-main-image" style="background-image: url('{{ attraction.thumb_nail.url }}')">
                 <div class="over-lay"></div>
-                <h3>{{ activity.title }}</h3>
+                <h3>{{ attraction.title }}</h3>
             </div>
             <div class="activity-body">
                 <ul class="activity-contact-details">
-                    {% if activity.contact_person %}
+                    {% if attraction.contact_person %}
                         <li>
                             <img src="{% static "icons/contact_person.png" %}" alt="" />
-                            <span>{{ activity.contact_person }}</span></li>
+                            <span>{{ attraction.contact_person }}</span></li>
                     {% endif %}
 
-                    {% if activity.location %}
+                    {% if attraction.location %}
                         <li>
                             <img src="{% static "icons/location.png" %}" alt="" />
-                            <a href="">{{ activity.location }}</a></li>
+                            <a href="">{{ attraction.location }}</a></li>
                     {% endif %}
 
 
-                    {% if activity.website %}
+                    {% if attraction.website %}
                         <li>
                             <img src="{% static "icons/website_icon.png" %}" alt="" />
-                            <a href="{{ activity.website }}" target="_blank">{{ activity.website }}</a></li>
+                            <a href="{{ attraction.website }}" target="_blank">{{ attraction.website }}</a></li>
                     {% endif %}
 
-                    {% if activity.contact_number %}
+                    {% if attraction.contact_number %}
                         <li>
                             <img src="{% static "icons/contact_number.png" %}" alt="" />
-                            <a href="">{{ activity.contact_number }}</a></li>
+                            <a href="">{{ attraction.contact_number }}</a></li>
                     {% endif %}
 
-                    {% if activity.email %}
+                    {% if attraction.email %}
                         <li>
                             <img src="{% static "icons/email_icon.png" %}" alt="" />
-                            <a href="">{{ activity.email }}</a></li>
+                            <a href="">{{ attraction.email }}</a></li>
                     {% endif %}
                     
-                    {% if activity.facebook_page_name and activity.facebook_page_link %}
+                    {% if attraction.facebook_page_name and attraction.facebook_page_link %}
                         <li>
                             <img src="{% static "icons/facebook_icon.png" %}" alt="" />
-                            <a href="{{ activity.facebook_page_link }}" target="_blank">{{ activity.facebook_page_name }}</a></li>
+                            <a href="{{ attraction.facebook_page_link }}" target="_blank">{{ attraction.facebook_page_name }}</a></li>
                     {% endif %}
 
-                    {% if activity.twitter_handle and activity.twitter_profile_link %}
+                    {% if attraction.twitter_handle and attraction.twitter_profile_link %}
                         <li>
                             <img src="{% static "icons/twitter_icon.png" %}" alt="" />
-                            <a href="{{ activity.twitter_profile_link }}">{{ activity.twitter_handle }}</a></li>
+                            <a href="{{ attraction.twitter_profile_link }}">{{ activity.twitter_handle }}</a></li>
                     {% endif %}
                     
                 </ul>
 
                 <div class="description">
-                    {{ activity.content | safe }}
+                    {{ attraction.description | safe }}
                 </div>
             </div>
 
@@ -78,7 +78,7 @@
                 <div style="background-image: url('{% static "images/card_3.jpg" %}')"></div>
                 <div style="background-image: url('{% static "images/horse_riding.jpg" %}')"></div>
                 <div style="background-image: url('{% static "images/shuttle_services_taxi.jpg" %}')"></div>
-                <div style="background-image: url('{{ activity.thumb_nail.url }}')"></div>
+                <div style="background-image: url('{{ attraction.thumb_nail.url }}')"></div>
             </div>
         </main>
     </div>
