@@ -20,7 +20,7 @@
             {% if attractions %}
                 {% for attraction in attractions %}
                     <div class="card">
-                        <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
+                        <img class="thumbnail" src="{{ attraction.thumb_nail.url }}" alt="" />
                         
                         <div class="card-body">
                             <h4>{{ attraction.title }}</h4>
