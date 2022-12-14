@@ -17,139 +17,25 @@
     <main>
         <div class="attractions-container">
 
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
+            {% if attractions %}
+                {% for attraction in attractions %}
+                    <div class="card">
+                        <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
+                        
+                        <div class="card-body">
+                            <h4>{{ attraction.title }}</h4>
+                            <div class="star-rating">
+                                {% if attraction.stars %}
+                                    {% for star in attraction.num_of_stars %}
+                                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="thumbnail" src="{% static 'images/medolino.jpg' %}" alt="" />
-                
-                <div class="card-body">
-                    <h4>The big pineapple</h4>
-                    <div class="star-rating">
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                </div>
-            </div>
-            
+                {% endfor %}
+            {% endif %}
+
         </div>
     </main>
     

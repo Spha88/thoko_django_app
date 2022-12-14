@@ -2,7 +2,7 @@
     position: relative;
     background-color: $light-grey;
     header {
-        height: 75vh;
+        height: 50vh;
         background-image: url('../images/land_rover.jpg');
         background-position: center center;
         background-size: 100% auto;
@@ -13,9 +13,8 @@
             background-size: 105% auto;
         }
         .mask {
-            
             height: 100%;
-            background-color: rgba(15, 122, 172, 0.452);
+            background-color: rgba(44, 73, 113, .9);
             .heading-container {
                 display: flex;
                 flex-direction: column;
@@ -24,10 +23,14 @@
                 height: 50%;
                 h2 {
                     font-size: 50px;
+                    margin: 0;
                     span {
                         font-family: 'Pacifico', cursive;
                         text-transform: capitalize;
                     }
+                }
+                h4 {
+                    margin: 0;
                 }
             }
         }
@@ -41,7 +44,7 @@
 
         .attractions-container {
             position: relative;
-            top: -20vh;
+            top: -10vh;
             // border: red 1px solid;
             width: 100%;
             display: flex;
@@ -59,7 +62,7 @@
                 .card-body {
                     padding: 10px;
                     h4 {
-                        // margin-bottom: 0;
+                        margin-bottom: 0;
                     }
                     .star-rating {
                         display: flex;
