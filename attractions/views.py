@@ -6,7 +6,7 @@ def attractions(request):
 
     edited_attractions = []
     for attraction in attractions:
-        attraction.num_of_stars = []
+        attraction.num_of_stars = [] #adding a new field in attraction
         for _ in range(attraction.stars):
             attraction.num_of_stars.append('star')
         edited_attractions.append(attraction)
