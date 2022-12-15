@@ -3,14 +3,14 @@
     font-family: 'Montserrat', sans-serif;
     z-index: 100;
     .nav-container {
+        position: relative;
         max-width: 1440px;
         height: 66px;
-        justify-content: space-between;
         margin: 0 auto;
-        display: flex;
         padding: 0;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        position: relative;
         @include media($large-laptop) {
             padding: 0 20px;
         }
@@ -29,49 +29,59 @@
                 margin: 0;
             }
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 15px;
-            li {
-                margin: 0 20px;
-            }
-            a {
-                text-decoration: none;
-                color: inherit;
-                &.active {
-                    color: #078088;
-                    font-weight: 900;
-                }
-            }
-            
+        div.nav-items-container {
+            // border: 1px solid violet;
             @include media($tablet) {
-                position: absolute;
-                right: -120%;
-                top: 100%;
                 width: 100%;
-                background-color: $white;
-                li {
-                    padding: 1em 0;
-                }
-                &.open {
-                    display: flex;
-                    right: 0;
-                }
+                position: absolute;
+                top: 100%;
+                right: 0;
+                overflow: hidden;
             }
-            @include media($mobile) {
-                flex-direction: column;
-                padding: 1em 0.5em;
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 15px;
                 li {
-                    padding: 0.5em 0;
+                    margin: 0 20px;
                 }
-            }
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    &.active {
+                        color: #078088;
+                        font-weight: 900;
+                    }
+                }
+                
+                @include media($tablet) {
+                    position: relative;
+                    right: -120%;
+                    top: 0;
+                    width: 100%;
+                    background-color: $white;
+                    li {
+                        padding: 1em 0;
+                    }
+                    &.open {
+                        display: flex;
+                        right: 0;
+                    }
+                }
+                @include media($mobile) {
+                    flex-direction: column;
+                    padding: 1em 0.5em;
+                    li {
+                        padding: 0.5em 0;
+                    }
+                }
 
+            }
         }
         #mobile-nav-button {
             display: none;

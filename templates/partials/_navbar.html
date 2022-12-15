@@ -4,13 +4,15 @@
             <h3 id="brand-logo">thoko pa</h3>
             <h5>Tour Guide</h5>
         </div>
-        <ul id="nav-items-container">
-            <li><a href="{% url "home" %}" class="{% if '/' == request.path %}active{% endif %}">home</a></li>
-            <li><a href="{% url "activities" %}" class="{% if 'activities' in request.path %}active{% endif %}">Activities</a></li>
-            <li><a href="{% url 'attractions' %}" class="{% if 'attractions' in request.path %}active{% endif %}">attractions</a></li>
-            <li><a href="#">dining</a></li>
-            <li><a href="#">contact</a></li>
-        </ul>
+        <div class="nav-items-container">
+            <ul id="nav-items">
+                <li><a href="{% url "home" %}" class="{% if '/' == request.path %}active{% endif %}">home</a></li>
+                <li><a href="{% url "activities" %}" class="{% if 'activities' in request.path %}active{% endif %}">Activities</a></li>
+                <li><a href="{% url 'attractions' %}" class="{% if 'attractions' in request.path %}active{% endif %}">attractions</a></li>
+                <li><a href="#">dining</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
         <div id="mobile-nav-button">
             <span></span>
             <span></span>

@@ -18,6 +18,9 @@
         .mask {
             height: 100%;
             background-color: rgba(44, 73, 113, .9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .heading-container {
                 display: flex;
                 flex-direction: column;
