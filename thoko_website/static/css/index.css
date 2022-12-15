@@ -1220,12 +1220,12 @@ main.attractions .attractions-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
 }
 main.attractions .attractions-container div.card {
   width: 24%;
   background-color: #f1f1f1;
+  margin: 5px;
   transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
@@ -1269,6 +1269,7 @@ main.attractions .attractions-container div.card .card-body .location {
 @media (max-width: 425px) {
   main.attractions .attractions-container div.card {
     width: 100%;
+    margin: 0 0 10px 0;
   }
   main.attractions .attractions-container div.card:last-child, main.attractions .attractions-container div.card:nth-child(7), main.attractions .attractions-container div.card:nth-child(6), main.attractions .attractions-container div.card:nth-child(5) {
     display: none;
@@ -1440,13 +1441,13 @@ main.attractions .attractions-container div.card .card-body .location {
 }
 #attraction-single-page main.more-attractions .attractions-container {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
 }
 #attraction-single-page main.more-attractions .attractions-container div.card {
   width: 24%;
   background-color: #f1f1f1;
+  margin: 5px;
   transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
@@ -1490,6 +1491,7 @@ main.attractions .attractions-container div.card .card-body .location {
 @media (max-width: 425px) {
   #attraction-single-page main.more-attractions .attractions-container div.card {
     width: 100%;
+    margin: 0 0 10px 0;
   }
   #attraction-single-page main.more-attractions .attractions-container div.card:last-child, #attraction-single-page main.more-attractions .attractions-container div.card:nth-child(7), #attraction-single-page main.more-attractions .attractions-container div.card:nth-child(6), #attraction-single-page main.more-attractions .attractions-container div.card:nth-child(5) {
     display: none;
