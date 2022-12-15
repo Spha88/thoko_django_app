@@ -125,7 +125,7 @@
         position: relative;
         max-width: 1440px;
         margin: 0 auto 2rem;
-        @include media($laptop) {
+        @include media($large-laptop) {
             padding: 0 10px;
         }
     
@@ -133,7 +133,7 @@
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
-            justify-content: flex-start;
+            justify-content: center;
     
             div.card {
                 width: 24%;
@@ -167,7 +167,7 @@
                 // car media queries
                 @include media($laptop) {
                     width: 30%;
-                    flex-grow: 1;
+                    // flex-grow: 1;
                 }
                 @include media($tablet) {
                     width: 45%;

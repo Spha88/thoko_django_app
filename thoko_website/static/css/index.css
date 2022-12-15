@@ -1146,7 +1146,6 @@ a {
 
 #attractions {
   position: relative;
-  background-color: #f1f1f1;
 }
 #attractions header {
   height: 50vh;
@@ -1156,6 +1155,12 @@ a {
   background-repeat: no-repeat;
   color: white;
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.651);
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 425px) {
+  #attractions header {
+    background-size: cover;
+  }
 }
 #attractions header:hover {
   background-size: 105% auto;
@@ -1187,6 +1192,12 @@ main.attractions {
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1440px) {
+  main.attractions {
+    padding: 10px;
+  }
 }
 main.attractions .attractions-container {
   position: relative;
@@ -1194,25 +1205,59 @@ main.attractions .attractions-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 10px;
+  justify-content: center;
 }
 main.attractions .attractions-container div.card {
   width: 24%;
-  margin-bottom: 20px;
-  background-color: #ffffff;
+  background-color: #f1f1f1;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 main.attractions .attractions-container div.card img.thumbnail {
   width: 100%;
   height: 200px;
+  object-fit: cover;
 }
 main.attractions .attractions-container div.card .card-body {
-  padding: 10px;
+  padding: 10px 20px 20px 20px;
 }
 main.attractions .attractions-container div.card .card-body h4 {
-  margin-bottom: 0;
+  margin: 0 0 5px 0;
+  padding: 0;
+  text-transform: capitalize;
+  color: #2c4971;
+  font-size: 0.95em;
 }
 main.attractions .attractions-container div.card .card-body .star-rating {
   display: flex;
+}
+main.attractions .attractions-container div.card .card-body .star-rating img {
+  width: auto;
+  height: auto;
+}
+main.attractions .attractions-container div.card .card-body .location {
+  padding: 5px 0 0 0;
+  font-size: 13px;
+}
+@media (max-width: 1024px) {
+  main.attractions .attractions-container div.card {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  main.attractions .attractions-container div.card {
+    width: 45%;
+  }
+}
+@media (max-width: 425px) {
+  main.attractions .attractions-container div.card {
+    width: 100%;
+  }
+  main.attractions .attractions-container div.card:last-child, main.attractions .attractions-container div.card:nth-child(7), main.attractions .attractions-container div.card:nth-child(6), main.attractions .attractions-container div.card:nth-child(5) {
+    display: none;
+  }
 }
 
 #attraction-single-page {
@@ -1373,7 +1418,7 @@ main.attractions .attractions-container div.card .card-body .star-rating {
   margin: 0 auto 2rem;
   transition: all 500ms ease-in-out;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   #attraction-single-page main.more-attractions {
     padding: 0 10px;
   }
@@ -1382,7 +1427,7 @@ main.attractions .attractions-container div.card .card-body .star-rating {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
 }
 #attraction-single-page main.more-attractions .attractions-container div.card {
   width: 24%;
@@ -1420,7 +1465,6 @@ main.attractions .attractions-container div.card .card-body .star-rating {
 @media (max-width: 1024px) {
   #attraction-single-page main.more-attractions .attractions-container div.card {
     width: 30%;
-    flex-grow: 1;
   }
 }
 @media (max-width: 768px) {

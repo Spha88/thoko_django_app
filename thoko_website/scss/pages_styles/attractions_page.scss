@@ -1,6 +1,6 @@
 #attractions {
     position: relative;
-    background-color: $light-grey;
+    // background-color: $light-grey;
     header {
         height: 50vh;
         background-image: url('../images/land_rover.jpg');
@@ -9,6 +9,9 @@
         background-repeat: no-repeat;
         color: white;
         text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.651);
+        @include media($mobile) {
+            background-size: cover;
+        }
         &:hover {
             background-size: 105% auto;
         }
@@ -42,31 +45,65 @@ main.attractions {
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
+    @include media($large-laptop) {
+        padding: 10px;
+    }
 
     .attractions-container {
+        // border: red 1px solid;
         position: relative;
         top: -10vh;
-        // border: red 1px solid;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        gap: 10px; 
+        justify-content: center;
 
         div.card {
             width: 24%;
-            margin-bottom: 20px;
-            background-color: $white;
+            background-color: $light-grey;
             img.thumbnail {
                 width: 100%;
                 height: 200px;
+                object-fit: cover;
             }
             .card-body {
-                padding: 10px;
+                padding: 10px 20px 20px 20px ;
                 h4 {
-                    margin-bottom: 0;
+                    margin: 0 0 5px 0;
+                    padding: 0;
+                    text-transform: capitalize;
+                    color: $dark-blue;
+                    font-size: .95em;
                 }
                 .star-rating {
                     display: flex;
+                    img {
+                        width: auto;
+                        height: auto;
+                    }
+                }
+                .location {
+                    padding: 5px 0 0 0;
+                    font-size: 13px;
+                }
+            }
+            // car media queries
+            @include media($laptop) {
+                width: 30%;
+                // flex-grow: 1;
+            }
+            @include media($tablet) {
+                width: 45%;
+            }
+            @include media($mobile) {
+                width: 100%;
+
+                &:last-child,
+                &:nth-child(7),
+                &:nth-child(6),
+                &:nth-child(5) {
+                    display: none;
                 }
             }
         }
