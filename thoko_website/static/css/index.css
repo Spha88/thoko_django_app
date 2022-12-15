@@ -1146,7 +1146,7 @@ a {
 
 #attractions {
   position: relative;
-  background-color: #e6e6e6;
+  background-color: #f1f1f1;
 }
 #attractions header {
   height: 50vh;
@@ -1182,12 +1182,13 @@ a {
 #attractions header .mask .heading-container h4 {
   margin: 0;
 }
-#attractions main {
+
+main.attractions {
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
 }
-#attractions main .attractions-container {
+main.attractions .attractions-container {
   position: relative;
   top: -10vh;
   width: 100%;
@@ -1195,23 +1196,250 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-#attractions main .attractions-container div.card {
+main.attractions .attractions-container div.card {
   width: 24%;
   margin-bottom: 20px;
   background-color: #ffffff;
 }
-#attractions main .attractions-container div.card img.thumbnail {
+main.attractions .attractions-container div.card img.thumbnail {
   width: 100%;
   height: 200px;
 }
-#attractions main .attractions-container div.card .card-body {
+main.attractions .attractions-container div.card .card-body {
   padding: 10px;
 }
-#attractions main .attractions-container div.card .card-body h4 {
+main.attractions .attractions-container div.card .card-body h4 {
   margin-bottom: 0;
 }
-#attractions main .attractions-container div.card .card-body .star-rating {
+main.attractions .attractions-container div.card .card-body .star-rating {
   display: flex;
+}
+
+#attraction-single-page {
+  /* 
+      Main part of the page contains details of a single attraction. 
+  */
+}
+#attraction-single-page header.attraction-main-header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+#attraction-single-page header.attraction-main-header img {
+  margin-right: 20px;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 425px) {
+  #attraction-single-page header.attraction-main-header img {
+    margin-right: 10px;
+  }
+}
+#attraction-single-page header.attraction-main-header ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#attraction-single-page header.attraction-main-header ul li {
+  display: inline-block;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 425px) {
+  #attraction-single-page header.attraction-main-header ul li {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1440px) {
+  #attraction-single-page header.attraction-main-header {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 425px) {
+  #attraction-single-page header.attraction-main-header {
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+}
+#attraction-single-page #attraction-container {
+  max-width: 1440px;
+  margin: 0 auto 6rem;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1440px) {
+  #attraction-single-page #attraction-container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 1024px) {
+  #attraction-single-page #attraction-container {
+    padding: 0 10px;
+  }
+}
+#attraction-single-page #attraction-container div#activity-main-image {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: center center no-repeat;
+  background-size: cover;
+  margin-bottom: 2rem;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #attraction-single-page #attraction-container div#activity-main-image {
+    height: 300px;
+  }
+}
+#attraction-single-page #attraction-container div#activity-main-image div.over-lay {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #2c4971 0%, rgba(0, 212, 255, 0) 100%);
+}
+#attraction-single-page #attraction-container div#activity-main-image h3 {
+  z-index: 10;
+  color: white;
+}
+#attraction-single-page #attraction-container div.activity-body {
+  display: flex;
+  gap: 20px;
+  max-width: 1024px;
+  padding: 0 10px;
+  margin: 0 auto 2rem;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #attraction-single-page #attraction-container div.activity-body {
+    flex-direction: column;
+  }
+}
+#attraction-single-page #attraction-container div.activity-body ul.activity-contact-details {
+  width: 35%;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+#attraction-single-page #attraction-container div.activity-body ul.activity-contact-details li {
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: black;
+}
+#attraction-single-page #attraction-container div.activity-body ul.activity-contact-details li img {
+  margin-right: 20px;
+  width: 24px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  #attraction-single-page #attraction-container div.activity-body ul.activity-contact-details {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #attraction-single-page #attraction-container div.activity-body ul.activity-contact-details li {
+    width: 50%;
+  }
+}
+@media (max-width: 425px) {
+  #attraction-single-page #attraction-container div.activity-body ul.activity-contact-details li {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+}
+#attraction-single-page #attraction-container div.activity-body div {
+  width: 65%;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #attraction-single-page #attraction-container div.activity-body div {
+    width: 100%;
+  }
+}
+#attraction-single-page header.attraction-more-heading {
+  text-align: center;
+  color: #2c4971;
+  margin-bottom: 2rem;
+}
+#attraction-single-page main.more-attractions {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto 2rem;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #attraction-single-page main.more-attractions {
+    padding: 0 10px;
+  }
+}
+#attraction-single-page main.more-attractions .attractions-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#attraction-single-page main.more-attractions .attractions-container div.card {
+  width: 24%;
+  background-color: #f1f1f1;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+#attraction-single-page main.more-attractions .attractions-container div.card img.thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+#attraction-single-page main.more-attractions .attractions-container div.card .card-body {
+  padding: 10px 20px 20px 20px;
+}
+#attraction-single-page main.more-attractions .attractions-container div.card .card-body h4 {
+  margin: 0 0 5px 0;
+  padding: 0;
+  text-transform: capitalize;
+  color: #2c4971;
+  font-size: 0.95em;
+}
+#attraction-single-page main.more-attractions .attractions-container div.card .card-body .star-rating {
+  display: flex;
+}
+#attraction-single-page main.more-attractions .attractions-container div.card .card-body .star-rating img {
+  width: auto;
+  height: auto;
+}
+#attraction-single-page main.more-attractions .attractions-container div.card .card-body .location {
+  padding: 5px 0 0 0;
+  font-size: 13px;
+}
+@media (max-width: 1024px) {
+  #attraction-single-page main.more-attractions .attractions-container div.card {
+    width: 30%;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 768px) {
+  #attraction-single-page main.more-attractions .attractions-container div.card {
+    width: 45%;
+  }
+}
+@media (max-width: 425px) {
+  #attraction-single-page main.more-attractions .attractions-container div.card {
+    width: 100%;
+  }
+  #attraction-single-page main.more-attractions .attractions-container div.card:last-child, #attraction-single-page main.more-attractions .attractions-container div.card:nth-child(7), #attraction-single-page main.more-attractions .attractions-container div.card:nth-child(6), #attraction-single-page main.more-attractions .attractions-container div.card:nth-child(5) {
+    display: none;
+  }
+}
+#attraction-single-page footer.attraction-view-all {
+  text-align: center;
+  color: #2c4971;
+  margin-bottom: 4rem;
 }
 
 /*# sourceMappingURL=index.css.map */

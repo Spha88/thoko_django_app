@@ -1,6 +1,6 @@
 $dark-blue: rgb(44, 73, 113);
 $turquoise: #078088;
-$light-grey: #e6e6e6;
+$light-grey: #f1f1f1;
 $white: #ffffff;
 
 /* Media query screen sizes */
@@ -114,3 +114,6 @@ a {
 
 // Attractions page
 @import './pages_styles/attractions_page.scss';
+
+// Attractions single page
+@import './pages_styles/attraction_single_page.scss';

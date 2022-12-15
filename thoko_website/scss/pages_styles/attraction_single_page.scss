@@ -1,0 +1,195 @@
+#attraction-single-page {
+    header.attraction-main-header {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 1rem 0 2rem 0; 
+        display: flex;
+        align-items: center;
+        img {
+            margin-right: 20px;
+            @include media($mobile) {
+                margin-right: 10px;
+            }
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline-block;
+                @include media($mobile) {
+                    font-size: 14px;
+                }
+            }
+        }
+        @include media($large-laptop) {
+            padding-left: 20px;
+        }
+        @include media($mobile) {
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    /* 
+        Main part of the page contains details of a single attraction. 
+    */ 
+    #attraction-container {
+        max-width: 1440px;
+        margin: 0 auto 6rem;
+        @include media($large-laptop) {
+            padding: 0 20px;
+        }
+        @include media($laptop) {
+            padding: 0 10px;
+        }
+        div#activity-main-image {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: center center no-repeat;
+            background-size: cover;
+            margin-bottom: 2rem;
+            @include media($laptop) {
+                height: 300px;
+            }
+            div.over-lay {
+                z-index: 1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, rgba(44,73,113,1) 0%, rgba(0,212,255,0) 100%);
+            }
+            h3 {
+                z-index: 10;
+                color: white;
+            }
+        }
+        div.activity-body {
+            display: flex;
+            gap: 20px;
+            max-width: 1024px;
+            padding: 0 10px;
+            margin: 0 auto 2rem;
+            @include media($tablet) {
+                flex-direction: column;
+            }
+            ul.activity-contact-details {
+                width: 35%;
+                li {
+                    padding-bottom: 20px;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 500;
+                    color: black;
+                    img {
+                        margin-right: 20px;
+                        width: 24px;
+                        height: auto;
+                    }
+                }
+                @include media($tablet) {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        width: 50%;
+                    }
+                }
+                @include media($mobile) {
+                    li {
+                        width: 100%;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+            div {
+                width: 65%;
+                @include media($tablet) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    header.attraction-more-heading {
+        text-align: center;
+        color: $dark-blue;
+        margin-bottom: 2rem;
+    }
+
+    main.more-attractions {
+        position: relative;
+        max-width: 1440px;
+        margin: 0 auto 2rem;
+        @include media($laptop) {
+            padding: 0 10px;
+        }
+    
+        .attractions-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+    
+            div.card {
+                width: 24%;
+                background-color: $light-grey;
+                img.thumbnail {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+                .card-body {
+                    padding: 10px 20px 20px 20px ;
+                    h4 {
+                        margin: 0 0 5px 0;
+                        padding: 0;
+                        text-transform: capitalize;
+                        color: $dark-blue;
+                        font-size: .95em;
+                    }
+                    .star-rating {
+                        display: flex;
+                        img {
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+                    .location {
+                        padding: 5px 0 0 0;
+                        font-size: 13px;
+                    }
+                }
+                // car media queries
+                @include media($laptop) {
+                    width: 30%;
+                    flex-grow: 1;
+                }
+                @include media($tablet) {
+                    width: 45%;
+                }
+                @include media($mobile) {
+                    width: 100%;
+
+                    &:last-child,
+                    &:nth-child(7),
+                    &:nth-child(6),
+                    &:nth-child(5) {
+                        display: none;
+                    }
+                }
+            }
+    
+        }
+    }
+
+    footer.attraction-view-all {
+        text-align: center;
+        color: $dark-blue;
+        margin-bottom: 4rem;
+    }
+}

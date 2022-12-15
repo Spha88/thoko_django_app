@@ -5,9 +5,9 @@
 
 {% block content %}
 
-<section id="activity-single-page">
+<section id="attraction-single-page">
     <div class="section-container">
-        <header>
+        <header class="attraction-main-header">
             <a href="./"><img src="{% static 'icons/arrow_back.png' %}" alt="arrow back to previous page" /></a>
             <ul>
                 <li><a href="{% url "home" %}">home /</a></li>
@@ -15,7 +15,9 @@
                 <li><a href="">{{ attraction.title }}</a></li>
             </ul>
         </header>
-        <main id="activity-container">
+
+        {% comment %} Single attraction main section {% endcomment %}
+        <main id="attraction-container">
             <div id="activity-main-image" style="background-image: url('{{ attraction.thumb_nail.url }}')">
                 <div class="over-lay"></div>
                 <h3>{{ attraction.title }}</h3>
@@ -62,7 +64,7 @@
                     {% if attraction.twitter_handle and attraction.twitter_profile_link %}
                         <li>
                             <img src="{% static "icons/twitter_icon.png" %}" alt="" />
-                            <a href="{{ attraction.twitter_profile_link }}">{{ activity.twitter_handle }}</a></li>
+                            <a href="{{ attraction.twitter_profile_link }}">{{ attraction.twitter_handle }}</a></li>
                     {% endif %}
                     
                 </ul>
@@ -71,16 +73,50 @@
                     {{ attraction.description | safe }}
                 </div>
             </div>
+        </main>
 
-            <div class="more-links">
-                <div style="background-image: url('{% static "/images/card_1.jpg" %}')"></div>
-                <div style="background-image: url('{% static "/images/card_2.jpg" %}')"></div>
-                <div style="background-image: url('{% static "images/card_3.jpg" %}')"></div>
-                <div style="background-image: url('{% static "images/horse_riding.jpg" %}')"></div>
-                <div style="background-image: url('{% static "images/shuttle_services_taxi.jpg" %}')"></div>
-                <div style="background-image: url('{{ attraction.thumb_nail.url }}')"></div>
+        {% comment %} More attraction {% endcomment %}
+        <header class="attraction-more-heading">
+            <h3>attractions</h3>
+        </header>
+
+        <main class="more-attractions">
+            <div class="attractions-container">
+    
+                {% if attractions %}
+                    {% for attraction in attractions %}
+                        <div class="card">
+                            <img class="thumbnail" src="{{ attraction.thumb_nail.url }}" alt="" />
+                            
+                            <div class="card-body">
+                                <a href="{{ attraction.get_absolute_url }}">
+                                    <h4>{{ attraction.title }}</h4>
+                                </a>
+                                <div class="star-rating">
+                                    {% if attraction.stars %}
+                                        {% for star in attraction.num_of_stars %}
+                                            <img src="{% static 'images/star_rating.svg' %}" alt="star" />
+                                        {% endfor %}
+                                    {% endif %}
+                                </div>
+                                <div class="location">
+                                    {% if attraction.location %}
+                                        <span>{{ attraction.location }}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+    
             </div>
         </main>
+
+        {% comment %} More attraction {% endcomment %}
+        <footer class="attraction-view-all">
+            <a href="{% url "attractions" %}"><h4>View All</h4></a>
+        </footer>
+
     </div>
 </section>
 
