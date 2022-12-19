@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'activities.apps.ActivitiesConfig',
     'attractions.apps.AttractionsConfig',
+    'restaurants.apps.RestaurantsConfig',
 
     'tinymce',
     'django.contrib.admin',

@@ -6,4 +6,3 @@ class AttractionAdmin(admin.ModelAdmin):
 
 admin.site.register(Attraction, AttractionAdmin)
 
-# Register your models here.
