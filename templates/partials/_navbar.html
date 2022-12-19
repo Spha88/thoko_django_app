@@ -9,7 +9,7 @@
                 <li><a href="{% url "home" %}" class="{% if '/' == request.path %}active{% endif %}">home</a></li>
                 <li><a href="{% url "activities" %}" class="{% if 'activities' in request.path %}active{% endif %}">Activities</a></li>
                 <li><a href="{% url 'attractions' %}" class="{% if 'attractions' in request.path %}active{% endif %}">attractions</a></li>
-                <li><a href="#">dining</a></li>
+                <li><a href="{% url 'dining' %}" class="{% if 'dining' in request.path %}active{% endif %}">dining</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
         </div>
