@@ -1503,4 +1503,55 @@ main.attractions .attractions-container div.card .card-body .location {
   margin-bottom: 4rem;
 }
 
+#restaurants {
+  margin-bottom: 40rem;
+}
+#restaurants header.dining_header {
+  background-image: url("../images/dining.jpg");
+  background-size: cover cover;
+  background-position: center center;
+  padding: 2rem 10px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+}
+#restaurants header.dining_header h2 {
+  text-shadow: 2px 2px 2px #000;
+}
+#restaurants section.dining_body {
+  max-width: 1440px;
+  margin: 2rem auto;
+  display: flex;
+}
+#restaurants section.dining_body main {
+  width: 70%;
+}
+#restaurants section.dining_body main div.restaurant_card {
+  display: flex;
+  background-color: #f1f1f1;
+  margin-bottom: 20px;
+}
+#restaurants section.dining_body main div.restaurant_card img {
+  width: 40%;
+}
+#restaurants section.dining_body main div.restaurant_card div.restaurant_card_body {
+  padding: 20px;
+}
+#restaurants section.dining_body main div.restaurant_card div.restaurant_card_body h2 {
+  margin-top: 0;
+}
+#restaurants section.dining_body main div.restaurant_card div.restaurant_card_body div.restaurant_star_rating {
+  margin-bottom: 20px;
+}
+#restaurants section.dining_body main div.restaurant_card div.restaurant_card_body div.restaurant_star_rating img {
+  width: 30px;
+}
+#restaurants section.dining_body main div.restaurant_card div.restaurant_card_body div.restaurant_tags {
+  margin-bottom: 10px;
+}
+
 /*# sourceMappingURL=index.css.map */

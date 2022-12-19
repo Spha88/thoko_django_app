@@ -1,0 +1,50 @@
+#restaurants {
+    margin-bottom: 40rem;
+    header.dining_header {
+        background-image: url('../images/dining.jpg');
+        background-size: cover cover;
+        background-position: center center;
+        padding: 2rem 10px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2rem;
+        color: $white;
+        h2 {
+            text-shadow: 2px 2px 2px #000;
+        }
+    }
+    section.dining_body {
+        max-width: 1440px;
+        margin: 2rem auto;
+        display: flex;
+        main {
+            width: 70%;
+            div.restaurant_card {
+                display: flex;
+                background-color: $light-grey;
+                margin-bottom: 20px;
+                img {
+                    width: 40%;
+                }
+                div.restaurant_card_body {
+                    padding: 20px;
+                    h2 {
+                        margin-top: 0;
+                    }
+                    div.restaurant_star_rating {
+                        margin-bottom: 20px;
+                        img {
+                            width: 30px;
+                        }
+                    }
+                    div.restaurant_tags {
+                        margin-bottom: 10px; 
+                    }
+                }
+            }
+        }
+    }
+}
