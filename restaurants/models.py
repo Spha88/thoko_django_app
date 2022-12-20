@@ -38,26 +38,18 @@ class Restaurant(models.Model):
     )
 
     # need to install taggit and add a tags field
+    website = models.URLField(max_length=200, blank=True, null=True)
+    contact_number = models.CharField(null=True, blank=True, max_length=15)
 
     address_street = models.CharField(blank=True, null=True, max_length=100)
     address_town = models.CharField(blank=True, null=True, max_length=100)
     address_postal_code = models.IntegerField(blank=True, null=True)
 
-    contact_number = models.CharField(null=True, blank=True, max_length=15)
-
-    opening_day = models.CharField(
-        choices=DAYS_OF_WEEK_CHOICES,
-        default="Monday",
-        verbose_name="Opening day",
-        help_text="Choose the day on which the restaurant opens for the week",
-        max_length=20
-    )
-    closing_day = models.CharField(
-        choices=DAYS_OF_WEEK_CHOICES,
-        default="Sunday",
-        verbose_name="Closing day",
-        help_text="Choose the day on which the restaurant closes for the week",
-        max_length=20
+    business_times = models.CharField(
+        blank=True, 
+        null=True, 
+        max_length=150,
+        help_text="For example: Tuesday to Sunday, 10:00 to 22:00 OR Weekdays 10:00 to 21:00",
     )
 
     # I need to add the time the restaurant opens and closes
@@ -71,8 +63,3 @@ class Restaurant(models.Model):
     is_published = models.BooleanField(default=True)
 
     date_added = models.DateTimeField(default=datetime.now, blank=True)
-
-    
-
-
-

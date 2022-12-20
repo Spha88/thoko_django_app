@@ -26,7 +26,7 @@
                 display: flex;
                 background-color: $light-grey;
                 margin-bottom: 20px;
-                img {
+                img.restaurant_thumbnail {
                     width: 40%;
                 }
                 div.restaurant_card_body {
@@ -40,9 +40,17 @@
                             width: 30px;
                         }
                     }
-                    div.restaurant_tags {
-                        margin-bottom: 10px; 
+                    ul.restaurant_details {
+                        li {
+                            img {
+                                margin-right: 10px;
+                            }
+                            display: flex;
+                            align-items: center;
+                            margin: 10px 0;
+                        }
                     }
+                    
                 }
             }
         }

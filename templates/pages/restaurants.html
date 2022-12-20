@@ -11,111 +11,44 @@
     </header>
     <section class="dining_body">
         <main>
-            <div class="restaurant_card">
-                <img width="20%" height="auto" src="{% static 'images/dining.jpg' %}" alt="restaurant_thumbnail" />
-                <div class="restaurant_card_body">
-                    <h2><a href="#">Restaurant title</a></h2>
-                    <div class="restaurant_star_rating">
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                    <div class="restaurant_tags">
-                        <span>Burdgers</span>,
-                        <span>Ribs</span>,
-                        <span>Pizzas</span>,
-                        <span>Sea food</span>,
-                        <span>Sushi</span>,
-                    </div>
-                    <div class="address">
-                        23 Warf Street, Port Alfred, Eastern Cape, 6170
-                    </div>
-                </div>
-            </div>
-            <div class="restaurant_card">
-                <img width="20%" height="auto" src="{% static 'images/dining.jpg' %}" alt="restaurant_thumbnail" />
-                <div class="restaurant_card_body">
-                    <h2><a href="#">Restaurant title</a></h2>
-                    <div class="restaurant_star_rating">
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                    <div class="restaurant_tags">
-                        <span>Burdgers</span>,
-                        <span>Ribs</span>,
-                        <span>Pizzas</span>,
-                        <span>Sea food</span>,
-                        <span>Sushi</span>,
-                    </div>
-                    <div class="address">
-                        23 Warf Street, Port Alfred, Eastern Cape, 6170
+            {% for restaurant in restaurants %}
+                <div class="restaurant_card">
+                    <img class="restaurant_thumbnail" width="20%" height="auto" src="{{ restaurant.thumb_nail.url }}" alt="restaurant_thumbnail" />
+                    <div class="restaurant_card_body">
+                        <h2><a href="#">{{ restaurant.title }}</a></h2>
+                        
+                        {% if restaurant.stars %}
+                            <div class="restaurant_star_rating">
+                                {% for star in restaurant.num_of_stars %}
+                                    <img src="{% static 'images/star_rating.svg' %}" alt="star" />
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        <ul class="restaurant_details">
+                            <li><span>Pizzas</span>, <span>Sea food</span>,<span>Sushi</span>,</li>
+                            <li>
+                                <img width="auto" height="auto" src="{% static 'icons/location.png' %}" alt="website icon" />
+                                {{ restaurant.address_street }}, {{ restaurant.address_town }}, {{ restaurant.address_postal_code }}
+                            </li>
+                            {% if restaurant.contact_number %}
+                                <li>
+                                    <img width="auto" height="auto" src="{% static 'icons/contact_number.png' %}" alt="website icon" />
+                                    {{ restaurant.contact_number }}
+                                </li>
+                            {% endif %}
+                            {% if restaurant.website %}
+                                <li>
+                                    <img width="auto" height="auto" src="{% static 'icons/website_icon.png' %}" alt="website icon" />
+                                    {{ restaurant.website }}
+                                </li>
+                            {% endif %}
+                        </ul>
                     </div>
                 </div>
-            </div>
-            <div class="restaurant_card">
-                <img width="20%" height="auto" src="{% static 'images/dining.jpg' %}" alt="restaurant_thumbnail" />
-                <div class="restaurant_card_body">
-                    <h2><a href="#">Restaurant title</a></h2>
-                    <div class="restaurant_star_rating">
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                    <div class="restaurant_tags">
-                        <span>Burdgers</span>,
-                        <span>Ribs</span>,
-                        <span>Pizzas</span>,
-                        <span>Sea food</span>,
-                        <span>Sushi</span>,
-                    </div>
-                    <div class="address">
-                        23 Warf Street, Port Alfred, Eastern Cape, 6170
-                    </div>
-                </div>
-            </div>
-            <div class="restaurant_card">
-                <img width="20%" height="auto" src="{% static 'images/dining.jpg' %}" alt="restaurant_thumbnail" />
-                <div class="restaurant_card_body">
-                    <h2><a href="#">Restaurant title</a></h2>
-                    <div class="restaurant_star_rating">
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                    <div class="restaurant_tags">
-                        <span>Burdgers</span>,
-                        <span>Ribs</span>,
-                        <span>Pizzas</span>,
-                        <span>Sea food</span>,
-                        <span>Sushi</span>,
-                    </div>
-                    <div class="address">
-                        23 Warf Street, Port Alfred, Eastern Cape, 6170
-                    </div>
-                </div>
-            </div>
-            <div class="restaurant_card">
-                <img width="20%" height="auto" src="{% static 'images/dining.jpg' %}" alt="restaurant_thumbnail" />
-                <div class="restaurant_card_body">
-                    <h2><a href="#">Restaurant title</a></h2>
-                    <div class="restaurant_star_rating">
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                        <img width="auto" height="auto" src="{% static 'images/star_rating.svg' %}" alt="star" />
-                    </div>
-                    <div class="restaurant_tags">
-                        <span>Burdgers</span>,
-                        <span>Ribs</span>,
-                        <span>Pizzas</span>,
-                        <span>Sea food</span>,
-                        <span>Sushi</span>,
-                    </div>
-                    <div class="address">
-                        23 Warf Street, Port Alfred, Eastern Cape, 6170
-                    </div>
-                </div>
-            </div>
+            {% empty %}
+                <h3>No Restaurants added yet</h3>
+            {% endfor %}
+            
 
         </main>
         <aside>

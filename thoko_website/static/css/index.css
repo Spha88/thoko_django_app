@@ -1535,7 +1535,7 @@ main.attractions .attractions-container div.card .card-body .location {
   background-color: #f1f1f1;
   margin-bottom: 20px;
 }
-#restaurants section.dining_body main div.restaurant_card img {
+#restaurants section.dining_body main div.restaurant_card img.restaurant_thumbnail {
   width: 40%;
 }
 #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body {
@@ -1550,8 +1550,13 @@ main.attractions .attractions-container div.card .card-body .location {
 #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body div.restaurant_star_rating img {
   width: 30px;
 }
-#restaurants section.dining_body main div.restaurant_card div.restaurant_card_body div.restaurant_tags {
-  margin-bottom: 10px;
+#restaurants section.dining_body main div.restaurant_card div.restaurant_card_body ul.restaurant_details li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+#restaurants section.dining_body main div.restaurant_card div.restaurant_card_body ul.restaurant_details li img {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */
