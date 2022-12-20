@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.utils.text import slugify
 
 from tinymce import models as tinymce_models
+from taggit.managers import TaggableManager
 
 class Restaurant(models.Model):
     NUMBER_OF_STARTS_CHOICES = [
@@ -38,6 +39,8 @@ class Restaurant(models.Model):
     )
 
     # need to install taggit and add a tags field
+    tags = TaggableManager(blank=True, help_text="Add tags/comma separated names which related to the restaurant. e.g burgers, children, wifi, toys, pizza, breakfast ")
+
     website = models.URLField(max_length=200, blank=True, null=True)
     contact_number = models.CharField(null=True, blank=True, max_length=15)
 
