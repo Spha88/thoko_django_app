@@ -1503,9 +1503,6 @@ main.attractions .attractions-container div.card .card-body .location {
   margin-bottom: 4rem;
 }
 
-#restaurants {
-  margin-bottom: 40rem;
-}
 #restaurants header.dining_header {
   background-image: url("../images/dining.jpg");
   background-size: cover cover;
@@ -1522,28 +1519,92 @@ main.attractions .attractions-container div.card .card-body .location {
 #restaurants header.dining_header h2 {
   text-shadow: 2px 2px 2px #000;
 }
+#restaurants section.restaurants-lead {
+  padding: 2em 10px;
+}
+#restaurants section.restaurants-lead p {
+  text-align: center;
+  font-size: 1.5em;
+  width: 50%;
+  margin: 0 auto;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 768px) {
+  #restaurants section.restaurants-lead p {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  #restaurants section.restaurants-lead p {
+    font-size: 16px;
+  }
+}
 #restaurants section.dining_body {
   max-width: 1440px;
   margin: 2rem auto;
   display: flex;
+  transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1440px) {
+  #restaurants section.dining_body {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 1024px) {
+  #restaurants section.dining_body {
+    flex-direction: column;
+  }
 }
 #restaurants section.dining_body main {
   width: 70%;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 1024px) {
+  #restaurants section.dining_body main {
+    width: 100%;
+  }
 }
 #restaurants section.dining_body main div.restaurant_card {
   display: flex;
   background-color: #f1f1f1;
   margin-bottom: 20px;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 425px) {
+  #restaurants section.dining_body main div.restaurant_card {
+    flex-direction: column;
+  }
 }
 #restaurants section.dining_body main div.restaurant_card img.restaurant_thumbnail {
   width: 40%;
   object-fit: cover;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 425px) {
+  #restaurants section.dining_body main div.restaurant_card img.restaurant_thumbnail {
+    width: 100%;
+    height: 250px;
+  }
 }
 #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body {
   padding: 40px 20px 40px 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  transition: all 500ms ease-in-out;
+}
+@media (max-width: 425px) {
+  #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body {
+    padding: 20px;
+  }
+  #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body h2 {
+    text-align: center;
+  }
+  #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body div.restaurant_star_rating {
+    text-align: center;
+  }
 }
 #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body h2 {
   margin: 0;
