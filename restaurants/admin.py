@@ -7,7 +7,7 @@ class RestaurantAdmin(admin.ModelAdmin):
     list_display = ('title', 'stars', 'address_street', 'contact_number')
     fieldsets = (
         (None, {
-            'fields': ('slug', 'title', 'thumb_nail', 'owner_description', 'tags', 'stars', 'website', 'contact_number', 'business_times')
+            'fields': ('slug', 'title', 'thumb_nail', 'food_sold', 'owner_description', 'stars', 'website', 'contact_number', 'business_times')
         }),
         ('Address', {
             'classes': ('collapse',),

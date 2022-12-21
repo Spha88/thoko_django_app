@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ attraction.title }}{% endblock title %}
+
+{% block content %}
+
+<section id="attraction-single-page">
+    <div class="section-container">
+        <header class="attraction-main-header">
+            <a href="./"><img src="{% static 'icons/arrow_back.png' %}" alt="arrow back to previous page" /></a>
+            <ul>
+                <li><a href="{% url "home" %}">home /</a></li>
+                <li><a href="{% url "dining" %}">dining /</a></li>
+                <li><a href="">{{ restaurant.title | lower }}</a></li>
+            </ul>
+        </header>
+
+        {% comment %} Single attraction main section {% endcomment %}
+        <main id="attraction-container">
+            <div id="activity-main-image" style="background-image: url('{{ restaurant.thumb_nail.url }}')">
+                <div class="over-lay"></div>
+                <h3>{{ restaurant.title }}</h3>
+            </div>
+            <div class="activity-body">
+                <ul class="activity-contact-details">
+                    {% if restaurant.contact_person %}
+                        <li>
+                            <img src="{% static "icons/contact_person.png" %}" alt="" />
+                            <span>{{ restaurant.contact_person }}</span></li>
+                    {% endif %}
+
+                    {% if restaurant.location %}
+                        <li>
+                            <img src="{% static "icons/location.png" %}" alt="" />
+                            <a href="">{{ restaurant.location }}</a></li>
+                    {% endif %}
+
+
+                    {% if restaurant.website %}
+                        <li>
+                            <img src="{% static "icons/website_icon.png" %}" alt="" />
+                            <a href="{{ restaurant.website }}" target="_blank" >{{ restaurant.website }}</a></li>
+                    {% endif %}
+
+                    {% if restaurant.contact_number %}
+                        <li>
+                            <img src="{% static "icons/contact_number.png" %}" alt="" />
+                            <a href="">{{ restaurant.contact_number }}</a></li>
+                    {% endif %}
+                    
+                    {% if restaurant.facebook_page_name and restaurant.facebook_page_link %}
+                        <li>
+                            <img src="{% static "icons/facebook_icon.png" %}" alt="" />
+                            <a href="{{ restaurant.facebook_page_link }}" target="_blank">{{ restaurant.facebook_page_name }}</a></li>
+                    {% endif %}
+
+                    {% if restaurant.twitter_handle and restaurant.twitter_profile_link %}
+                        <li>
+                            <img src="{% static "icons/twitter_icon.png" %}" alt="" />
+                            <a href="{{ restaurant.twitter_profile_link }}">{{ restaurant.twitter_handle }}</a></li>
+                    {% endif %}
+                    
+                </ul>
+
+                <div class="description">
+                    {{ restaurant.owner_description | safe }}
+                </div>
+            </div>
+        </main>
+
+        {% comment %} More attraction {% endcomment %}
+        <header class="attraction-more-heading">
+            <h3>More restaurants</h3>
+        </header>
+
+        <main class="more-attractions">
+            <div class="attractions-container">
+    
+                Add list of restaurant here
+    
+            </div>
+        </main>
+
+        {% comment %} More attraction {% endcomment %}
+        <footer class="attraction-view-all">
+            <a href="{% url "dining" %}"><h4>View All</h4></a>
+        </footer>
+
+    </div>
+</section>
+
+{% include "partials/_shuttle_services.html" %}
+    
+{% endblock content %}

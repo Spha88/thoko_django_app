@@ -7,5 +7,6 @@ def restaurants(request):
     restaurants = add_num_of_star_list(restaurants)
     return render(request, 'pages/restaurants.html', { 'restaurants': restaurants})
 
-def restaurant_single_page(request):
-    return render(request, 'pages/single_restaurant_page.html')
+def restaurant_single_page(request, slug):
+    restaurant = Restaurant.objects.get(slug=slug)
+    return render(request, 'pages/single_restaurant_page.html', {'restaurant': restaurant})

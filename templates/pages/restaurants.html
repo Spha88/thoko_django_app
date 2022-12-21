@@ -15,7 +15,7 @@
                 <div class="restaurant_card">
                     <img class="restaurant_thumbnail" width="20%" height="auto" src="{{ restaurant.thumb_nail.url }}" alt="restaurant_thumbnail" />
                     <div class="restaurant_card_body">
-                        <h2><a href="#">{{ restaurant.title }}</a></h2>
+                        <h2><a href="{{ restaurant.get_absolute_url }}">{{ restaurant.title }}</a></h2>
                         
                         {% if restaurant.stars %}
                             <div class="restaurant_star_rating">
@@ -25,7 +25,15 @@
                             </div>
                         {% endif %}
                         <ul class="restaurant_details">
-                            <li><span>Pizzas</span>, <span>Sea food</span>,<span>Sushi</span>,</li>
+                            {% if restaurant.food_sold %}
+                                <li class="food_sold"> {{ restaurant.food_sold }} </li>
+                            {% endif %}
+                            {% if restaurant.business_times %}
+                                <li>
+                                    <img width="auto" height="auto" src="{% static 'icons/contact_number.png' %}" alt="website icon" />
+                                    {{ restaurant.business_times }}
+                                </li>
+                            {% endif %}
                             <li>
                                 <img width="auto" height="auto" src="{% static 'icons/location.png' %}" alt="website icon" />
                                 {{ restaurant.address_street }}, {{ restaurant.address_town }}, {{ restaurant.address_postal_code }}
@@ -39,7 +47,7 @@
                             {% if restaurant.website %}
                                 <li>
                                     <img width="auto" height="auto" src="{% static 'icons/website_icon.png' %}" alt="website icon" />
-                                    {{ restaurant.website }}
+                                    <a href="{{ restuarant.website }}" target="_blank">{{ restaurant.website }}</a>
                                 </li>
                             {% endif %}
                         </ul>

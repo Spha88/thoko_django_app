@@ -1537,26 +1537,36 @@ main.attractions .attractions-container div.card .card-body .location {
 }
 #restaurants section.dining_body main div.restaurant_card img.restaurant_thumbnail {
   width: 40%;
+  object-fit: cover;
 }
 #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body {
-  padding: 20px;
+  padding: 40px 20px 40px 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body h2 {
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
+  color: #2c4971;
 }
 #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body div.restaurant_star_rating {
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 5px 0;
 }
 #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body div.restaurant_star_rating img {
-  width: 30px;
+  width: 24px;
 }
 #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body ul.restaurant_details li {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 8px 0;
+  font-size: 15px;
 }
 #restaurants section.dining_body main div.restaurant_card div.restaurant_card_body ul.restaurant_details li img {
   margin-right: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 /*# sourceMappingURL=index.css.map */
