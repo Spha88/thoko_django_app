@@ -80,13 +80,11 @@
             <h3>attractions</h3>
         </header>
 
-        <main class="more-attractions">
-            <div class="attractions-container">
-    
+        <main class="cards-list-grid">
                 {% if attractions %}
                     {% for attraction in attractions %}
                         <div class="card">
-                            <img class="thumbnail" src="{{ attraction.thumb_nail.url }}" alt="" />
+                            <div class="thumbnail" style="background-image: url('{{ attraction.thumb_nail.url }}')"></div>
                             
                             <div class="card-body">
                                 <a href="{{ attraction.get_absolute_url }}">
@@ -108,8 +106,6 @@
                         </div>
                     {% endfor %}
                 {% endif %}
-    
-            </div>
         </main>
 
         {% comment %} More attraction {% endcomment %}
