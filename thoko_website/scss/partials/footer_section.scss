@@ -1,9 +1,10 @@
 #site_footer {
     background-color: $dark-blue;
     color: $white;
+    margin-top: 4rem;
     #footer_container {
         max-width: 1300px;
-        margin: 0 auto;
+        margin: 2rem auto 0;
         padding: 4em 0;
         display: flex;
         justify-content: space-between;

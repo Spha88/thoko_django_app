@@ -57,11 +57,10 @@
 
 .cards-list-grid {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 2rem auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 4rem;
     @include media($large-laptop) {
         padding: 10px;
     }

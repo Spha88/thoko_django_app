@@ -5,9 +5,9 @@
 
 {% block content %}
 
-<section id="attraction-single-page">
-    <div class="section-container">
-        <header class="attraction-main-header">
+<section class="single_page_details">
+    <div class="single_page_container">
+        <header class="single_page_bread_crumbs">
             <a href="./"><img src="{% static 'icons/arrow_back.png' %}" alt="arrow back to previous page" /></a>
             <ul>
                 <li><a href="{% url "home" %}">home /</a></li>
@@ -17,13 +17,13 @@
         </header>
 
         {% comment %} Single attraction main section {% endcomment %}
-        <main id="attraction-container">
-            <div id="activity-main-image" style="background-image: url('{{ restaurant.thumb_nail.url }}')">
+        <main class="single_page_content_container">
+            <div class="single_page_hero" style="background-image: url('{{ restaurant.thumb_nail.url }}')">
                 <div class="over-lay"></div>
                 <h3>{{ restaurant.title }}</h3>
             </div>
-            <div class="activity-body">
-                <ul class="activity-contact-details">
+            <div class="single_page_body">
+                <ul class="single_page_info">
                     {% if restaurant.contact_person %}
                         <li>
                             <img src="{% static "icons/contact_person.png" %}" alt="" />
@@ -63,14 +63,14 @@
                     
                 </ul>
 
-                <div class="description">
+                <div class="single_page_content">
                     {{ restaurant.owner_description | safe }}
                 </div>
             </div>
         </main>
 
         {% comment %} More attraction {% endcomment %}
-        <header class="attraction-more-heading">
+        <header class="single_page_others_heading">
             <h3>More restaurants</h3>
         </header>
 
@@ -83,8 +83,8 @@
         </main>
 
         {% comment %} More attraction {% endcomment %}
-        <footer class="attraction-view-all">
-            <a href="{% url "dining" %}"><h4>View All</h4></a>
+        <footer class="single_page_view_all_footer">
+            <a href="{% url "dining" %}"><h3>View All</h3></a>
         </footer>
 
     </div>
