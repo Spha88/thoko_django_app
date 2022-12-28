@@ -1160,7 +1160,7 @@ a {
   position: relative;
 }
 #attractions header {
-  height: 50vh;
+  height: 300px;
   background-image: url("../images/land_rover.jpg");
   background-position: center center;
   background-size: 100% auto;
@@ -1179,7 +1179,7 @@ a {
 }
 #attractions header .mask {
   height: 100%;
-  background-color: rgba(44, 73, 113, 0.9);
+  background-color: rgba(5, 15, 29, 0.452);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1189,22 +1189,34 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50%;
+  height: 100%;
 }
 #attractions header .mask .heading-container h2 {
   font-size: 50px;
   margin: 0;
 }
 #attractions header .mask .heading-container h2 span {
-  font-family: "Pacifico", cursive;
   text-transform: capitalize;
+  font-weight: normal;
 }
 #attractions header .mask .heading-container h4 {
   margin: 0;
+  font-size: 30px;
+  font-weight: 100;
+}
+#attractions section.lead {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 10px;
+}
+#attractions section.lead h2 {
+  text-transform: initial;
+  color: #2c4971;
+  font-weight: 100;
 }
 
 main.attractions {
-  position: relative;
   max-width: 1440px;
   margin: 0 auto;
   transition: all 500ms ease-in-out;
@@ -1215,12 +1227,11 @@ main.attractions {
   }
 }
 main.attractions .attractions-container {
-  position: relative;
-  top: -10vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 4rem;
 }
 main.attractions .attractions-container div.card {
   width: 24%;
