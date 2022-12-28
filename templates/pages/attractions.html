@@ -17,31 +17,29 @@
     <section class="lead">
         <h2>Port Alfred has a diverse list of activities that attract tourists from all over the world, here is a non-exhaustive list from which you can choose what suites your lifestyle and taste</h2>
     </section>
-    <main class="attractions">
-        <div class="attractions-container">
 
-            {% if attractions %}
-                {% for attraction in attractions %}
-                    <div class="card">
-                        <img class="thumbnail" src="{{ attraction.thumb_nail.url }}" alt="" />
-                        
-                        <div class="card-body">
-                            <a href="{{ attraction.get_absolute_url }}">
-                                <h4>{{ attraction.title }}</h4>
-                            </a>
-                            <div class="star-rating">
-                                {% if attraction.stars %}
-                                    {% for star in attraction.num_of_stars %}
-                                        <img src="{% static 'images/star_rating.svg' %}" alt="star" />
-                                    {% endfor %}
-                                {% endif %}
-                            </div>
+    <main class="cards-list-grid">
+        {% if attractions %}
+            {% for attraction in attractions %}
+                <div class="card">
+                    
+                    <div class="thumbnail" style="background-image: url('{{ attraction.thumb_nail.url }}')"></div>
+                    
+                    <div class="card-body">
+                        <a href="{{ attraction.get_absolute_url }}">
+                            <h4>{{ attraction.title }}</h4>
+                        </a>
+                        <div class="star-rating">
+                            {% if attraction.stars %}
+                                {% for star in attraction.num_of_stars %}
+                                    <img src="{% static 'images/star_rating.svg' %}" alt="star" />
+                                {% endfor %}
+                            {% endif %}
                         </div>
                     </div>
-                {% endfor %}
-            {% endif %}
-
-        </div>
+                </div>
+            {% endfor %}
+        {% endif %}
     </main>
     
 </section>

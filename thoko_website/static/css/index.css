@@ -1156,9 +1156,6 @@ a {
   }
 }
 
-#attractions {
-  position: relative;
-}
 #attractions header {
   height: 300px;
   background-image: url("../images/land_rover.jpg");
@@ -1216,24 +1213,21 @@ a {
   font-weight: 100;
 }
 
-main.attractions {
+.cards-list-grid {
   max-width: 1440px;
   margin: 0 auto;
-  transition: all 500ms ease-in-out;
-}
-@media (max-width: 1440px) {
-  main.attractions {
-    padding: 10px;
-  }
-}
-main.attractions .attractions-container {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 4rem;
+  transition: all 500ms ease-in-out;
 }
-main.attractions .attractions-container div.card {
+@media (max-width: 1440px) {
+  .cards-list-grid {
+    padding: 10px;
+  }
+}
+.cards-list-grid .card {
   width: 24%;
   background-color: #f1f1f1;
   margin: 5px;
@@ -1241,48 +1235,48 @@ main.attractions .attractions-container div.card {
   transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
 }
-main.attractions .attractions-container div.card img.thumbnail {
+.cards-list-grid .card div.thumbnail {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  background-size: cover;
 }
-main.attractions .attractions-container div.card .card-body {
+.cards-list-grid .card .card-body {
   padding: 10px 20px 20px 20px;
 }
-main.attractions .attractions-container div.card .card-body h4 {
+.cards-list-grid .card .card-body h4 {
   margin: 0 0 5px 0;
   padding: 0;
   text-transform: capitalize;
   color: #2c4971;
   font-size: 0.95em;
 }
-main.attractions .attractions-container div.card .card-body .star-rating {
+.cards-list-grid .card .card-body .star-rating {
   display: flex;
 }
-main.attractions .attractions-container div.card .card-body .star-rating img {
+.cards-list-grid .card .card-body .star-rating img {
   width: auto;
   height: auto;
 }
-main.attractions .attractions-container div.card .card-body .location {
+.cards-list-grid .card .card-body .location {
   padding: 5px 0 0 0;
   font-size: 13px;
 }
 @media (max-width: 1024px) {
-  main.attractions .attractions-container div.card {
+  .cards-list-grid .card {
     width: 30%;
   }
 }
 @media (max-width: 768px) {
-  main.attractions .attractions-container div.card {
+  .cards-list-grid .card {
     width: 45%;
   }
 }
 @media (max-width: 425px) {
-  main.attractions .attractions-container div.card {
+  .cards-list-grid .card {
     width: 100%;
     margin: 0 0 10px 0;
   }
-  main.attractions .attractions-container div.card:last-child, main.attractions .attractions-container div.card:nth-child(7), main.attractions .attractions-container div.card:nth-child(6), main.attractions .attractions-container div.card:nth-child(5) {
+  .cards-list-grid .card:last-child, .cards-list-grid .card:nth-child(7), .cards-list-grid .card:nth-child(6), .cards-list-grid .card:nth-child(5) {
     display: none;
   }
 }
