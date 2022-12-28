@@ -21,6 +21,13 @@
             <div class="single_page_hero" style="background-image: url('{{ restaurant.thumb_nail.url }}')">
                 <div class="over-lay"></div>
                 <h3>{{ restaurant.title }}</h3>
+                {% if restaurant.stars %}
+                    <div class="single_page_star_rating">
+                        {% for star in restaurant.number_of_stars %}
+                            <img src="{% static 'images/star_rating.svg' %}" alt="star" />
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
             <div class="single_page_body">
                 <ul class="single_page_info">
@@ -30,10 +37,10 @@
                             <span>{{ restaurant.contact_person }}</span></li>
                     {% endif %}
 
-                    {% if restaurant.location %}
+                    {% if restaurant.business_times %}
                         <li>
-                            <img src="{% static "icons/location.png" %}" alt="" />
-                            <a href="">{{ restaurant.location }}</a></li>
+                            <img src="{% static "icons/time.png" %}" alt="" />
+                            <a href="">{{ restaurant.business_times }}</a></li>
                     {% endif %}
 
 
@@ -47,6 +54,13 @@
                         <li>
                             <img src="{% static "icons/contact_number.png" %}" alt="" />
                             <a href="">{{ restaurant.contact_number }}</a></li>
+                    {% endif %}
+
+                    {% if restaurant.address_street %}
+                        <li>
+                            <img src="{% static "icons/location.png" %}" alt="" />
+                            {{ restaurant.address_street }} <br/>{{ restaurant.address_town }}<br />{{ restaurant.address_postal_code }}
+                        </li>
                     {% endif %}
                     
                     {% if restaurant.facebook_page_name and restaurant.facebook_page_link %}
