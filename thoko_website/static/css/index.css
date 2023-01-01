@@ -42,6 +42,21 @@ a {
   color: inherit;
 }
 
+.lead {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 10px;
+  text-transform: initial;
+  color: #2c4971;
+  font-weight: 100;
+}
+.lead > * {
+  text-transform: initial;
+  color: #2c4971;
+  font-weight: 100;
+}
+
 /* Navigation Menu */
 #main-nav {
   position: relative;
@@ -1227,17 +1242,6 @@ div.more-links div {
 #attractions header .mask .heading-container h4 {
   margin: 0;
   font-size: 30px;
-  font-weight: 100;
-}
-#attractions section.lead {
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 10px;
-}
-#attractions section.lead h2 {
-  text-transform: initial;
-  color: #2c4971;
   font-weight: 100;
 }
 
