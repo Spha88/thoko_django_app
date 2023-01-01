@@ -89,13 +89,33 @@
             <h3>More restaurants</h3>
         </header>
 
-        <main class="more-attractions">
-            <div class="attractions-container">
-    
-                Add list of restaurant here
-    
-            </div>
-        </main>
+        <main class="cards-list-grid">
+            {% if restaurants %}
+                {% for restaurant in restaurants %}
+                    <div class="card">
+                        <div class="thumbnail" style="background-image: url('{{ restaurant.thumb_nail.url }}')"></div>
+                        
+                        <div class="card-body">
+                            <a href="{{ restaurant.get_absolute_url }}">
+                                <h4>{{ restaurant.title }}</h4>
+                            </a>
+                            
+                            {% if restaurant.food_sold %}
+                                <div>
+                                    {{ restaurant.food_sold }}
+                                </div>
+                            {% endif %}
+                            
+                            <div class="location">
+                                {% if restaurant.location %}
+                                    <span>{{ restaurant.location }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+    </main>
 
         {% comment %} More attraction {% endcomment %}
         <footer class="single_page_view_all_footer">

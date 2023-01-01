@@ -3,7 +3,6 @@ def add_num_of_star_list(objects):
     '''
         Add number_of_stars list to each attraction based on the "stars" field to be looped in template
     '''
-
     try: 
         edited_objects = []
         for object in objects:
@@ -18,6 +17,5 @@ def add_num_of_star_list(objects):
         objects.number_of_stars = []
         for _ in range(objects.stars):
             objects.number_of_stars.append('star')
-        print(objects.number_of_stars)
         return objects
     

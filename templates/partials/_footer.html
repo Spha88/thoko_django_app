@@ -17,7 +17,7 @@
                 <li><a href="#" class="{% if 'about' in request.path %}active{% endif %}">About</a></li>
                 <li><a href="{% url 'attractions' %}" class="{% if 'attractions' in request.path %}active{% endif %}">Attractions</a></li>
                 <li><a href="{% url 'activities' %}" class="{% if 'activities' in request.path %}active{% endif %}">Activities</a></li>
-                <li>Dining</li>
+                <li><a href="{% url 'dining' %}" class="{% if 'dining' in request.path %}active{% endif %}">Dining</a></li>
                 <li>Contact us</li>
             </ul>
         </div>
