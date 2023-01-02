@@ -9,4 +9,5 @@ def restaurants(request):
 
 def restaurant_single_page(request, slug):
     restaurant = Restaurant.objects.get(slug=slug)
-    return render(request, 'pages/single_restaurant_page.html', {'restaurant': restaurant})
+    restaurants = Restaurant.objects.all()[:8]
+    return render(request, 'pages/single_restaurant_page.html', {'restaurant': restaurant, 'restaurants': restaurants})
