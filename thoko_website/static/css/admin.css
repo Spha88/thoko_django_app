@@ -1,0 +1,15 @@
+#header {
+    background-color: rgb(44, 73, 113);
+}
+
+#header #branding #head {
+    color: #fff;
+}
+
+table caption {
+    background-color: #078088 !important;
+}
+
+.object-tools li .addlink {
+    background-color: #078088 !important;
+}
