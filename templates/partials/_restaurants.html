@@ -1,0 +1,24 @@
+{% load static %}
+<section id="places-to-stay">
+    <header>
+        <h2>Places to eat</h2>
+    </header>
+    {% if restaurants %}
+    <main class="three_cards_container">
+        {% for restaurant in restaurants %}
+            <div class="my-card">
+                <img src="{{ restaurant.thumb_nail.url }}" alt="card_image" />
+                <div class="card-body">
+                    <h3><a href="{{ restaurant.get_absolute_url }}">{{ restaurant.title }}</a></h3>
+                    <p>{{ restaurant.extract | safe }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+    {% else %}
+        <h5>No restaurants added yet</h5>
+    {% endif %}
+    <footer>
+        <a href="{% url "dining" %}">View all</a>
+    </footer>
+</section>

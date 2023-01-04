@@ -1,6 +1,18 @@
 from django.shortcuts import render
 
-from activities.models import Activity
+from restaurants.models import Restaurant
+from thoko_website.helper_functions import make_extract
 
 def home(request):
-    return render(request, 'pages/index.html')
+    restaurants = Restaurant.objects.all()[:3]
+
+    for restaurant in restaurants:
+        restaurant.extract = make_extract(restaurant.owner_description, 20)
+
+    context = {
+        'restaurants' : restaurants,
+    }
+
+    print(restaurants[0].owner_description)
+
+    return render(request, 'pages/index.html', context )
