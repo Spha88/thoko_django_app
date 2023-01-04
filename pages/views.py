@@ -13,6 +13,4 @@ def home(request):
         'restaurants' : restaurants,
     }
 
-    print(restaurants[0].owner_description)
-
     return render(request, 'pages/index.html', context )
