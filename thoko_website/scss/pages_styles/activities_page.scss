@@ -1,23 +1,10 @@
 #activities {
-    .section-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 10px;
-    }
-
-    header {
-        margin: 3rem 0;
-        padding-left: 4rem;
-        h2 {
-            font-size: 40px;
-            color: $dark-blue;
-        }
-        @include media($laptop) {
-            padding: 0 2rem;
-        }
-    }
     
     main#activities-container {
+        max-width: 1400px;
+        margin:  0 auto 5rem;
+        padding: 0 10px;
+
         @include media($laptop) {
            padding: 0 2rem;
         }
@@ -28,7 +15,7 @@
 
     .activity-card {
         display: flex;
-        margin-bottom: 6rem;
+        margin-bottom: 2rem;
         @include media($tablet) {
             flex-direction: column;
         }

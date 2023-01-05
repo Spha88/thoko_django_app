@@ -6,32 +6,32 @@
 {% block content %}
 
 <section id="activities">
-    <div class="section-container">
-        <header>
-            <h2>Activities</h2>
-        </header>
-        <main id="activities-container">
-            {% if activities %}
-                {% for activity in activities %}
-                    <div class="activity-card">
-                        <div class="activity-image" style="background-image: url('{{ activity.thumb_nail.url }}')">
-                            <a href="{{ activity.get_absolute_url }}" class="activity-link">click for details</a>
-                        </div>
-                        <div class="activity-content">
-                            <h3>{{ activity.subtitle }}</h3>
-                            <h2>{{ activity.title }}</h2>
-                            <p class="description">
-                                {{ activity.excerpt | safe }}
-                            </p>
-                        </div>
+    <header class="page_header" style="background-image: url('{% static 'images/surfing.jpg' %}')">
+        <h2>Activities</h2>
+    </header>
+    <section class="lead">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus aspernatur enim cumque dolorum! Sint, ad. Repudiandae hic dolorem iusto quod nesciunt commodi corporis modi nisi minus, dignissimos a et dolore!</h2>
+    </section>
+    <main id="activities-container">
+        {% if activities %}
+            {% for activity in activities %}
+                <div class="activity-card">
+                    <div class="activity-image" style="background-image: url('{{ activity.thumb_nail.url }}')">
+                        <a href="{{ activity.get_absolute_url }}" class="activity-link">click for details</a>
                     </div>
-                {% endfor %}
-            {% else %}
-                <h3>No causes added yet</h3>
-            {% endif %}
-            
-        </main>
-    </div>
+                    <div class="activity-content">
+                        <h3>{{ activity.subtitle }}</h3>
+                        <h2>{{ activity.title }}</h2>
+                        <p class="description">
+                            {{ activity.excerpt | safe }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h3>No causes added yet</h3>
+        {% endif %}
+    </main>
 </section>
 
 {% include "partials/_shuttle_services.html" %}
