@@ -1,0 +1,15 @@
+.page_header {
+    background-size: cover cover;
+    background-position: center center;
+    padding: 2rem 10px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    color: $white;
+    h2 {
+        text-shadow: 2px 2px 2px #000;
+    }
+}

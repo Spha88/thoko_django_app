@@ -104,8 +104,14 @@ a {
 /* Navigation Menu */
 @import './partials/main_nav.scss';
 
+/* Page header */
+@import './partials/page_header.scss';
+
 /*  Three horizontal cards styles  */
-@import './partials/three_cards_styles.scss'; 
+@import './partials/three_cards_styles.scss';
+
+/* Card list grid */
+@import './partials/cards_list_grid.scss';
 
 /* Hero */
 @import './partials/hero.scss';
@@ -133,7 +139,7 @@ a {
 @import './pages_styles/single_page.scss';
 
 // Attractions page
-@import './pages_styles/attractions_page.scss';
+// All styles are general and in partials
 
 // Attractions single page
 @import './pages_styles/attraction_single_page.scss';
